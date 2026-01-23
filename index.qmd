@@ -1,0 +1,22 @@
+---
+title: "Introducción al lenguaje R + RStudio"
+format: html
+---
+
+## Diapositivas
+
+[Unidad 1: Instalación e introducción al lenguaje R](https://datos-ine.github.io/R-virologia-diapos/unidad1)
+
+[Unidad 2: Exploración, diagnóstico y limpieza de datos](https://datos-ine.github.io/R-virologia-diapos/unidad2)
+
+[Unidad 3: Procesamiento de datos](https://datos-ine.github.io/R-virologia-diapos/unidad3)
+
+[Unidad 4: Tratamiento de datos específicos](https://datos-ine.github.io/R-virologia-diapos/unidad4)
+
+[Unidad 5: Estadística descriptiva](https://datos-ine.github.io/R-virologia-diapos/unidad5)
+
+[Unidad 6: Inferencia estadística](https://datos-ine.github.io/R-virologia-diapos/unidad6)
+
+[Unidad 7: Visualización de datos](https://datos-ine.github.io/R-virologia-diapos/unidad7)
+
+[Unidad 8: Comunicar con RStudio](https://datos-ine.github.io/R-virologia-diapos/unidad8)
