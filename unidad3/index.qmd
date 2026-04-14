@@ -117,6 +117,8 @@ Además existe un abanico de funciones que **ayudan** a una mejor selección de 
 
 <br>
 
+Tenemos estos nombres de variables de una tabla leída.
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -124,15 +126,23 @@ Además existe un abanico de funciones que **ayudan** a una mejor selección de 
 
 library(tidyverse)
 
-datos <- read_csv("datos/datos.csv")
+datos <- read_csv2("datos/Enterovirus_practicas_depuracion.csv", locale = locale(encoding = "latin1")) |> 
+  mutate(Sexo = tolower(Sexo)) |> 
+  janitor::clean_names()
 
-names(datos)
+names(datos) 
 ```
 
+## Ejemplo de select() {.title-top}
+
+<br>
+
+Usamos `select()` con un ayudante para quedarnos con una parte de la tabla original 
+
 ```{r, echo = T, message=F, warning=FALSE}
-# seleccionamos solo variables que comienzan con "F5" 
+# seleccionamos solo variables que comienzan con "s_" 
 datos |> 
-  select(starts_with("F5")) |> names()
+  select(starts_with("s_")) |> names()
 ```
 
 ## rename() {.title-top}
@@ -170,33 +180,36 @@ datos |> rename_with(función, variables)
 <br>
 
 ```{r, echo = T, eval=F}
-# renombramos F2_Edad por EDAD
+# renombramos s_fiebre por fiebre
 
 datos |> 
-  rename(EDAD = F2_Edad) 
+  rename(fiebre = s_fiebre) 
 ```
 
 
 ```{r, echo=FALSE, message=F, warning=FALSE}
 datos |> 
-  rename(EDAD = F2_Edad)  |> 
-  select(EDAD) |> names()
+  rename(fiebre = s_fiebre)   |> 
+  names()
 
 ```
+## Ejemplo de rename() y rename_with() {.title-top}
+
+<br>
 
 ```{r, echo = T, eval=F}
-# renombramos el grupo de variables que comienza con F5 
-# por sus nombres en minúsculas
+# renombramos el grupo de variables que comienza con s_
+# por sus nombres en mayúsculas
 
 datos |> 
-  rename_with(.fn = tolower, .cols = starts_with("F5")) 
+  rename_with(.fn = toupper, .cols = starts_with("s_")) 
 ```
 
 
 ```{r, echo=FALSE, message=F, warning=FALSE}
 datos |> 
-  rename_with(.fn = tolower, .cols = starts_with("F5"))  |>  
-  select(starts_with("F5")) |> names()
+  rename_with(.fn = toupper, .cols = starts_with("s_"))  |>  
+  names()
 
 ```
 
@@ -247,10 +260,10 @@ datos |> filter(condición)
 ```{r, echo = T}
 # filtramos observaciones que cumplan con la siguiente condición
 datos |> 
-  filter(F3_Sexo == 1, 
-         between(F2_Edad, 17, 20), 
-         H1_Cerveza == TRUE | H1_Vino == TRUE) |> 
-  select(F3_Sexo, F2_Edad, H1_Cerveza, H1_Vino)
+  filter(sexo == "f", 
+         between(edad, 30, 50), 
+         s_fiebre == "Si" | s_cefalea == "Si") |> 
+  select(sexo, edad, s_fiebre, s_cefalea)
 ```
 
 ## arrange() {.title-top}
@@ -337,7 +350,7 @@ Algunas de las operaciones y funciones vectorizadas provistas por el lenguaje R 
 
 <br>
 
-Coercionamos la variable aplicando dmy() y as_date() 
+Coercionamos la variable aplicando `dmy()` y `as_date()` 
 
 :::: {.columns}
 
@@ -345,7 +358,7 @@ Coercionamos la variable aplicando dmy() y as_date()
 
 ```{r, echo=T}
 
-datos |> select(F1_FNac)
+datos |> select(fecha)
 
 ```
 
@@ -356,9 +369,9 @@ datos |> select(F1_FNac)
 
 ```{r, echo=T}
 datos |> 
-  mutate(F1_FNac = dmy_hms(F1_FNac),
-         F1_FNac = as_date(F1_FNac)) |> 
-  select(F1_FNac)
+  mutate(fecha = dmy(fecha),
+         fecha = as_date(fecha)) |> 
+  select(fecha)
 ```
 
 :::
@@ -411,14 +424,14 @@ La mayoría de estas funciones aplican en tipos de datos int (enteros), dbl (rea
 <br>
 
 ```{r, echo=TRUE}
-# Resumimos la variable F2_Edad calculando media, 
+# Resumimos la variable edad calculando media, 
 # desvío estandar, mínimo y máximo
 
 datos |> 
-  summarise(Media = mean(F2_Edad, na.rm = T),
-            Desvio = sd(F2_Edad, na.rm = T),
-            Min = min(F2_Edad, na.rm = T),
-            Max = max(F2_Edad, na.rm = T)) 
+  summarise(Media = mean(edad),
+            Desvio = sd(edad),
+            Min = min(edad),
+            Max = max(edad)) 
 ```
 
 ## group_by() {.title-top}
@@ -455,15 +468,14 @@ datos |> ungroup()
 
 
 ```{r, echo=TRUE}
-# Resumimos la variable F2_Edad según Anio 
+# Resumimos la variable edad según sexo 
 # calculando media, desvío estandar, mínimo y máximo
-
 datos |> 
-  group_by(Anio) |> 
-  summarise(Media = mean(F2_Edad, na.rm = T),
-            Desvio = sd(F2_Edad, na.rm = T),
-            Min = min(F2_Edad, na.rm = T),
-            Max = max(F2_Edad, na.rm = T)) 
+  group_by(sexo) |> 
+  summarise(Media = mean(edad),
+            Desvio = sd(edad),
+            Min = min(edad),
+            Max = max(edad)) 
 ```
 
 ## Agrupamiento en summarise() {.title-top}
@@ -489,15 +501,14 @@ datos |> summarise(.by = variable_grupo)
 
 
 ```{r, echo=TRUE}
-# Resumimos la variable F2_Edad según Anio con .by
+# Resumimos la variable edad según sexo con .by
 # calculando media, desvío estandar, mínimo y máximo
-
 datos |> 
-  summarise(Media = mean(F2_Edad, na.rm = T),
-            Desvio = sd(F2_Edad, na.rm = T),
-            Min = min(F2_Edad, na.rm = T),
-            Max = max(F2_Edad, na.rm = T),
-            .by = Anio) 
+  summarise(Media = mean(edad, na.rm = T),
+            Desvio = sd(edad, na.rm = T),
+            Min = min(edad, na.rm = T),
+            Max = max(edad, na.rm = T),
+            .by = sexo) 
 ```
 
 
@@ -529,11 +540,11 @@ También se pueden agregar más variables separadas por una coma.
 <br>
 
 ```{r, echo=T, message=F, warning=FALSE}
-# Contamos las frecuencias de la variable Anio
+# Contamos las frecuencias de la variable sexo
 # ordenadas de mayor a menor
 
 datos |> 
-  count(Anio, sort = T)
+  count(sexo, sort = T)
 ```
 
 ## if_else() {.title-top}
@@ -559,14 +570,14 @@ datos |>
 
 ```{r, echo=T, message=F, warning=FALSE}
 datos |> 
-  summarise(Mediana_edad = median(F2_Edad, na.rm = T))
+  summarise(Mediana_edad = median(edad))
 ```
 
 ```{r, echo=T}
 # dividimos en dos grupos según la mediana de edad
 datos |> 
-  mutate(Grupo_edad = if_else(F2_Edad <= 14, "<= 14", "> 14")) |>
-  count(Grupo_edad) 
+  mutate(grupo_edad = if_else(edad <= 6, "<= 6", "> 6")) |>
+  count(grupo_edad) 
 ```
 
 
@@ -597,17 +608,18 @@ datos |>
 
 
 ```{r, echo=T}
-# etiquetamos la variable V1_Alegre
+# creamos grupos etarios irregulares
 datos |> 
-  mutate(V1_Alegre = case_when(
-    V1_Alegre == 0 ~ "Nada",
-    V1_Alegre == 1 ~ "Poco",
-    V1_Alegre == 2 ~ "Neutral",
-    V1_Alegre == 3 ~ "Muy",
-    V1_Alegre == 4 ~ "Totalmente",
-    .default = "Ns/Nc"
+  mutate(grupo_edad = case_when(
+    edad < 18 ~ "1.Menor 18 años",
+    edad > 17 & edad < 25 ~ "2.18 a 24 años",
+    edad > 24 & edad < 35 ~ "3.25 a 34 años",
+    edad > 34 & edad < 45 ~ "4.35 a 44 años",
+    edad > 44 & edad < 65 ~ "5.45 a 64 años",
+    edad > 64 ~ "6.65 y más años",
+    .default = "Sin dato"
   )) |> 
-  count(V1_Alegre, sort = T)
+  count(grupo_edad)
 
 ```
 
@@ -639,12 +651,12 @@ Los dos extremos (izquierda y derecha) se incluyen en el intervalo
 <br>
 
 ```{r,  echo=TRUE}
-# filtramos observaciones donde la variable F2_Edad sea mayor 
-# o igual a 16 y menor o igual 18 años
+# filtramos observaciones donde la variable edad sea mayor 
+# o igual a 6 y menor o igual 18 años
 
 datos |> 
- filter(between(F2_Edad, 16, 18)) |> 
-  count(F2_Edad)
+ filter(between(edad, 6, 18)) |> 
+  count(edad)
 
 ```
 

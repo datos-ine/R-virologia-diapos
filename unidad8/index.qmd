@@ -146,7 +146,7 @@ Celsius = \${d3.format(".0f")(temp)}℃ y Fahrenheit = \${d3.format(".1f")(temp 
 cballejo$ quarto --help
 
   Usage:   quarto
-  Version: 1.8.25
+  Version: 1.9.37
 
   Description:
     Quarto CLI
@@ -175,7 +175,7 @@ cballejo$ quarto --help
 
 -   El sitio web de `Quarto` es <https://quarto.org/>
 
--   La **versión actual** es 1.8.25 (Windows) del 16/01/2026
+-   La **versión actual** es 1.9.37 (Windows) del 09/04/2026
 
 -   La **guía oficial** se puede encontrar en <https://quarto.org/docs/guide/>
 

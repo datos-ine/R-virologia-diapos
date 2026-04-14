@@ -1,0 +1,223 @@
+Año;NoMtra;Fecha;Provincia;Sexo;LCR;MF-HR;HF;S;Otro tipo muestra;PCR EV LCR;AISL RES LCR;PCR EV otra mta;AISL RES otra mta;DX;Diagnóstico;Edad;Fecha Toma mta;S_Fiebre;S_Cefalea;S_Vomitos;S_Rigidez Nuca;S_Fotofobia;S_Exantema;S_Convulsiones;S_Diarrea;S_Alteración del sensorio;S_Otros
+2023;1;12/1/2023;Chaco;M;Si;No;No;Si; ;Negativo;N; ;NR;A01;Ataxia;45;11/1/2023;No;No;No;No;No;No;No;No;No;Ataxia
+2023;2;15/1/2023;Buenos Aires;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;3;14/1/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;3;18/1/2023;Córdoba;F;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;5;17/1/2023;Si;Si;Si;No;No;No;Si;No;Si;Crisis parciales
+2023;4;18/1/2023;Entre Ríos;F;Si;No;No;Si; ;Negativo;N; ;NR;A02;bradipsiquia - Ataxia;52;17/1/2023;No;No;No;No;No;No;No;No;Si;Bradipsiquia
+2023;5;25/1/2023;La Pampa;M;Si;No;No;Si; ;Negativo;N; ;NR;A03;disartria diplopia - Atrofia cortical;68;24/1/2023;No;No;No;No;No;No;No;No;No;Disartria y diplopia
+2023;6;2/2/2023;Formosa;F;Si;No;No;Si; ;Positivo;P; ;NR;C01;alteracion del sensorio - Cefalea;28;1/2/2023;No;Si;No;No;Si;No;No;No;Si;
+2023;7;3/2/2023;Santa Fe;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;2/2/2023;Si;Si;Si;Si;Si;No;No;No;Si;Letargia
+2023;8;8/2/2023;Misiones;M;No;No;Si;No;Biopsia; ; ;Negativo;N;C02;fotofobia lesion vesicular en MII - Convulsiones;15;7/2/2023;Si;No;No;No;Si;Si;Si;No;No; 
+2023;9;10/2/2023;Mendoza;f;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;9/2/2023;Si;No;No;No;No;Si;No;No;No;Lesiones vesiculares manos y pies
+2023;10;15/2/2023;Buenos aires;M;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;6;14/2/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;11;15/2/2023;Jujuy;F;Si;No;No;Si; ;Negativo;N; ;NR;C03;Convulsión;22;14/2/2023;Si;No;No;No;No;No;Si;No;No;
+2023;12;22/2/2023;Catamarca;M;No;Si;No;No; ; ; ;Positivo;P;C04;Convulsión fiebre vomito;44;21/2/2023;Si;No;Si;No;No;No;Si;No;No; 
+2023;13;1/3/2023;Tucumán;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;7;28/2/2023;Si;Si;Si;No;No;No;Si;No;Si;Desorientación
+2023;14;1/3/2023;La Rioja;F;Si;No;No;Si; ;Negativo;N; ;NR;C05;Cuadriparesia;58;28/2/2023;No;No;No;No;No;No;No;No;No;Cuadriparesia
+2023;15;5/3/2023;Salta;M;No;Si;No;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;4/3/2023;Si;No;No;No;No;Si;No;No;No;Vesículas orales
+2023;16;8/3/2023;San Juan;M;Si;No;No;Si; ;Negativo;N; ;NR;D01;Debilidad muscular polineuro… sensitivo motoro;42;7/3/2023;No;No;No;No;No;No;No;No;No;Debilidad muscular
+2023;17;12/3/2023;Corrientes; ;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;11/3/2023;Si;Si;Si;Si;No;No;No;No;Si;Somnolencia
+2023;18;15/3/2023;San Luis;F;Si;No;No;Si; ;Negativo;N; ;NR;D02;Demencia progresiva;72;14/3/2023;No;No;No;No;No;No;No;No;Si;Deterioro cognitivo
+2023;19;20/3/2023;Neuquén;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;5;18/3/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;20;22/3/2023;Santa Cruz;M;Si;No;No;Si; ;Negativo;N; ;NR;D03;Desorientacion excitación psicomotriz fiebre;35;21/3/2023;Si;No;No;No;No;No;No;No;Si;Excitación psicomotriz
+2023;21;1/4/2023;Río Negro;F;Si;No;No;Si; ;Negativo;N; ;NR;D04;Deterioro del sensorio;48;31/3/2023;No;No;No;No;No;No;No;No;Si;
+2023;22;2/4/2023;Chaco;M;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;1/4/2023;Si;No;No;No;No;Si;No;No;No;Úlceras bucales
+2023;23;8/4/2023;Entre Ríos;F;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;81;7/4/2023;Si;Si;Si;No;No;No;Si;No;Si;Confusión
+2023;24;8/4/2023;Tierra del Fuego;M;Si;No;No;Si; ;Negativo;N; ;NR;D05;Diferencial con MP;65;7/4/2023;No;No;No;No;No;No;No;No;No;Temblor
+2023;25;15/4/2023;La Pampa;m;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;14/4/2023;Si;Si;Si;Si;Si;No;No;No;Si; 
+2023;26;15/4/2023;Buenos Aires;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E02;Encefalitis sepsis;38;14/4/2023;Si;Si;Si;No;No;No;Si;No;Si;Shock séptico
+2023;27;22/4/2023;CABA;F;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;3;21/4/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;28;22/4/2023;Córdoba;M;Si;Si;No;Si;Biopsia cerebral;Positivo;P;Negativo;N;E03;Encefalomielitis con romboencefalitis;12;21/4/2023;Si;Si;Si;No;No;No;No;No;Si;Nistagmo
+2023;29;1/5/2023;Misiones;M;No;Si;Si;No;Hisopado  sal; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;10;30/4/2023;Si;No;No;No;No;Si;No;No;No;Exantema maculopapular
+2023;30;1/5/2023;Santa Fe;F;No;No;Si;No;Hisopado  sofaríngeo; ; ;Positivo;P;E04;Enfermedad respiratoria;13;30/4/2023;Si;No;No;No;No;No;No;No;No;Tos y disnea
+2023;31;8/5/2023;Jujuy;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;6;7/5/2023;Si;Si;Si;No;No;No;Si;No;Si;Alteración de conciencia
+2023;32;8/5/2023;Mendoza;M;Si;No;No;Si; ;Negativo;N; ;NR;E05;Episodio convulsivo;18;7/5/2023;No;No;No;No;No;No;Si;No;No;
+2023;33;15/5/2023;Catamarca;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;5;14/5/2023;Si;Si;Si;Si;No;No;No;No;Si;Bradipsiquia
+2023;34;15/5/2023;CABA;F;No;No;Si;No;Saliva; ; ;Positivo;P;E06;Exantema;2;14/5/2023;Si;No;No;No;No;Si;No;No;No;Rash maculopapular
+2023;35;22/5/2023;Salta;M;Si;No;No;Si; ;Negativo;N; ;NR;F01;Fiebre sin foco;71;21/5/2023;Si;No;No;No;No;No;No;No;No;
+2023;36;1/6/2023;La Rioja;F;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;4;31/5/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;37;1/6/2023;Corrientes;F;No;Si;No;No; ; ; ;Positivo;P;G01;GEA Plejia facilal paraparesia peribucal;65;31/5/2023;Si;No;Si;No;No;No;No;Si;No;Plejia facial
+2023;38;8/6/2023;Neuquén;M;Si;No;No;Si;Biopsia hepática;Negativo;N;Positivo;P;H01;Hepatitis;32;7/6/2023;Si;No;Si;No;No;No;No;No;No;Ictericia
+2023;39;10/6/2023;San Juan;m;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;20;9/6/2023;Si;No;No;No;No;Si;No;No;No;Lesiones palmoplantares
+2023;40;15/6/2023;Chaco;F;Si;No;No;Si; ;Negativo;N; ;NR;H02;Hipotonia rechazo al alimento;28;14/6/2023;No;No;No;No;No;No;No;No;No;Hipotonía
+2023;41;18/6/2023;San Luis;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;9;17/6/2023;Si;Si;Si;No;No;No;Si;No;Si; 
+2023;42;22/6/2023;Entre Ríos;M;Si;No;No;Si;Biopsia cerebral;Negativo;N;Negativo;N;L01;LMP;55;21/6/2023;No;No;No;No;No;No;No;No;Si;Demencia
+2023;43;25/6/2023;Santa Cruz;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;24/6/2023;Si;Si;Si;Si;Si;No;No;No;Si;Irritabilidad
+2023;44;1/7/2023;La Pampa;F;Si;No;No;Si; ;Negativo;N; ;NR;P01;Paraparesia;28;30/6/2023;No;No;No;No;No;No;No;No;No;Paraparesia
+2023;45;2/7/2023;Río Negro; ;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;6;1/7/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;46;8/7/2023;Formosa;M;Si;No;No;Si; ;Negativo;N; ;NR;P02;Paraparesia MMII fiebre cefalea vomito;24;7/7/2023;Si;Si;Si;No;No;No;No;No;No;Paraparesia miembros inferiores
+2023;47;10/7/2023;Tierra del Fuego;M;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;9/7/2023;Si;No;No;No;No;Si;No;No;No;Vesículas perioral
+2023;48;15/7/2023;CABA;F;Si;No;No;Si; ;Negativo;N; ;NR;P03;Paraparesia miembros inferiores;35;14/7/2023;No;No;No;No;No;No;No;No;No;Paraparesia
+2023;49;18/7/2023;Buenos Aires;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;7;17/7/2023;Si;Si;Si;No;No;No;Si;No;Si;Excitación psicomotriz
+2023;50;22/7/2023;Jujuy;M;Si;No;No;Si; ;Negativo;N; ;NR;P04;Paresia craneal izq;48;21/7/2023;No;No;No;No;No;No;No;No;No;Paresia facial
+2023;51;25/7/2023;Córdoba;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;24/7/2023;Si;Si;Si;Si;No;No;No;No;Si; 
+2023;52;1/8/2023;Santa Fe;f;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;5;31/7/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;53;1/8/2023;Catamarca;F;No;Si;Si;No;Saliva; ; ;Positivo;P;P05;Parotiditis;12;31/7/2023;Si;No;No;No;No;No;No;No;No;Tumefacción parotídea
+2023;54;8/8/2023;Mendoza;M;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;7/8/2023;Si;No;No;No;No;Si;No;No;No;E ntema
+2023;55;8/8/2023;La Rioja;M;Si;No;No;Si;Biopsia miocardio;Negativo;N;Negativo;N;P06;Pericarditis constrictiva izquemia miocardio fallecida;62;7/8/2023;No;No;No;No;No;No;No;No;No;Insuficiencia cardíaca
+2023;56;15/8/2023;Tucumán;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;8;14/8/2023;Si;Si;Si;No;No;No;Si;No;Si;Desorientación
+2023;57;15/8/2023;San Juan;F;Si;No;No;Si; ;Negativo;N; ;NR;SD01;S/D;45;14/8/2023;No;No;No;No;No;No;No;No;No;
+2023;58;22/8/2023;Salta;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;30;21/8/2023;Si;Si;Si;Si;Si;No;No;No;Si;Letargia
+2023;59;22/8/2023;San Luis;M;Si;No;No;Si; ;Negativo;N; ;NR;S01;Sme. Bulbar cuadriparesia progresiva;58;21/8/2023;No;No;No;No;No;No;No;No;No;Disartria y disfagia
+2023;60;1/9/2023;Corrientes;F;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;4;31/8/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;61;1/9/2023;CABA;F;Si;No;No;Si; ;Negativo;N; ;NR;S02;Sme. Confusio l;52;31/8/2023;No;No;No;No;No;No;No;No;Si;Confusión
+2023;62;8/9/2023;Neuquén; ;No;Si;Si;No;Hisopado  sal; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;7/9/2023;Si;No;No;No;No;Si;No;No;No;Máculas en manos
+2023;63;8/9/2023;Río Negro;M;Si;No;No;Si; ;Negativo;N; ;NR;S03;Sme. Deficitario motor;42;7/9/2023;No;No;No;No;No;No;No;No;No;Hemiparesia
+2023;64;15/9/2023;Chaco;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;16;14/9/2023;Si;Si;Si;No;No;No;Si;No;Si;Confusión mental
+2023;65;15/9/2023;Tierra del Fuego;F;Si;No;No;Si; ;Negativo;N; ;NR;S04;Sme. Guillan Barré;38;14/9/2023;No;No;No;No;No;No;No;No;No;Parestesias y debilidad ascendente
+2023;66;22/9/2023;Entre Ríos;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;5;21/9/2023;Si;Si;Si;Si;No;No;No;No;Si; 
+2023;67;22/9/2023;Buenos Aires;M;Si;Si;No;Si; ;Negativo;N;Negativo;N;S05;Sme. Meningeo;25;21/9/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;68;1/10/2023;La Pampa;m;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;3;30/9/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;69;1/10/2023;Córdoba;F;Si;No;No;Si; ;Negativo;N; ;NR;T01;Trastornos de conducta desorientacion agresividad fiebre;32;30/9/2023;Si;No;No;No;No;No;No;No;Si;Agresividad
+2023;70;8/10/2023;Formosa;F;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;7/10/2023;Si;No;No;No;No;Si;No;No;No;Aftas orales
+2023;71;8/10/2023;Santa Fe;M;No;Si;No;No; ; ; ;Positivo;P;V01;Vomitos fiebre diarrea rechazo alimento;3;7/10/2023;Si;No;Si;No;No;No;No;Si;No;Rechazo del alimento
+2023;72;15/10/2023;Misiones;M;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;77;14/10/2023;Si;Si;Si;No;No;No;Si;No;Si;Alteración del sensorio
+2023;73;22/10/2023;CABA;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;21/10/2023;Si;Si;Si;Si;Si;No;No;No;Si; 
+2023;74;1/11/2023;Catamarca;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;6;31/10/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;75;8/11/2023;La Rioja;f;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;7/11/2023;Si;No;No;No;No;Si;No;No;No;Vesículas plantares
+2023;76;15/11/2023;San Juan;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;8;14/11/2023;Si;Si;Si;No;No;No;Si;No;Si; 
+2023;77;22/11/2023;San Luis;F;Si;Si;No;Si; ;Positivo;P;Positivo;P;ME01;Meningoencefalitis;3;21/11/2023;Si;Si;Si;Si;No;No;No;No;Si;Somnolencia
+2023;78;1/12/2023;Santa Cruz;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;5;30/11/2023;Si;Si;Si;Si;Si;No;No;No;No; 
+2023;79;8/12/2023;Río Negro; ;No;Si;Si;No;Hisopado  sofaríngeo; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;7/12/2023;Si;No;No;No;No;Si;No;No;No;Erupción vesicular
+2023;80;15/12/2023;Tierra del Fuego;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;6;14/12/2023;Si;Si;Si;No;No;No;Si;No;Si;Agitación
+2023;81;22/12/2023;Buenos Aires;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;40;21/12/2023;Si;Si;Si;Si;Si;No;No;No;Si; 
+2024;1;5/1/2024;Córdoba;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;3;4/1/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;2;10/1/2024;Santa Fe;m;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;189;9/1/2024;Si;No;No;No;No;Si;No;No;No;Pápulas palmares
+2024;3;10/1/2024;Mendoza;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;9;9/1/2024;Si;Si;Si;No;No;No;Si;No;Si; 
+2024;4;15/1/2024;Mendoza;M;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;7;14/1/2024;Si;Si;Si;No;No;No;Si;No;Si;Deterioro del sensorio
+2024;5;15/1/2024;Tucumán;M;Si;Si;No;Si; ;Positivo;P;Positivo;P;ME01;Meningoencefalitis;66;14/1/2024;Si;Si;Si;Si;Si;No;No;No;Si; 
+2024;6;20/1/2024;Tucumán;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;50;19/1/2024;Si;Si;Si;Si;No;No;No;No;Si; 
+2024;7;20/1/2024;Salta;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;4;19/1/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;8;25/1/2024;CABA;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;4;24/1/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;9;25/1/2024;Corrientes;m;No;Si;Si;No;Hisopado  sal; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;24/1/2024;Si;No;No;No;No;Si;No;No;No;Vesículas acrolocalizadas
+2024;10;1/2/2024;Corrientes;f;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;31/1/2024;Si;No;No;No;No;Si;No;No;No;Lesiones periorales
+2024;11;1/2/2024;Neuquén;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;7;31/1/2024;Si;Si;Si;No;No;No;Si;No;Si;Confusión mental
+2024;12;5/2/2024;Neuquén;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;8;4/2/2024;Si;Si;Si;No;No;No;Si;No;Si;Desorientación
+2024;13;5/2/2024;Chaco;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;4/2/2024;Si;Si;Si;Si;No;No;No;No;Si; 
+2024;14;10/2/2024;CABA; ;Si;Si;No;Si; ;Positivo;P;Positivo;P;ME01;Meningoencefalitis;33;9/2/2024;Si;Si;Si;Si;Si;No;No;No;Si;Irritabilidad
+2024;15;10/2/2024;Entre Ríos;M;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;5;9/2/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;16;15/2/2024;Entre Ríos;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;6;14/2/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;17;15/2/2024;La Pampa;f;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;14/2/2024;Si;No;No;No;No;Si;No;No;No;Lesiones mano-pie-boca
+2024;18;20/2/2024;La Pampa;F;No;Si;Si;No;Hisopado  sal; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;31;19/2/2024;Si;No;No;No;No;Si;No;No;No;Exantema vesicular
+2024;19;20/2/2024;Formosa;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;8;19/2/2024;Si;Si;Si;No;No;No;Si;No;Si;Alteración del sensorio
+2024;20;25/2/2024;Formosa;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;7;24/2/2024;Si;Si;Si;No;No;No;Si;No;Si;Confusión
+2024;21;25/2/2024;Misiones;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;24/2/2024;Si;Si;Si;Si;Si;No;No;No;Si;Irritabilidad
+2024;22;1/3/2024;CABA;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;29/2/2024;Si;Si;Si;Si;No;No;No;No;Si; 
+2024;23;1/3/2024;Jujuy;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;6;29/2/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;24;5/3/2024;Jujuy;m;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;5;4/3/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;25;5/3/2024;San Juan;M;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;4/3/2024;Si;No;No;No;No;Si;No;No;No;Erupción vesicular
+2024;26;10/3/2024;Catamarca;M;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;9/3/2024;Si;No;No;No;No;Si;No;No;No;Lesiones acrolocalizadas
+2024;27;10/3/2024;La Rioja;F;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;7;9/3/2024;Si;Si;Si;No;No;No;Si;No;Si;Desorientación
+2024;28;15/3/2024;La Rioja;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;6;14/3/2024;Si;Si;Si;No;No;No;Si;No;Si;Alteración de conciencia
+2024;29;15/3/2024;La Pampa; ;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;14/3/2024;Si;Si;Si;Si;No;No;No;No;Si;Letargia
+2024;30;20/3/2024;San Juan;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;19/3/2024;Si;Si;Si;Si;Si;No;No;No;Si;Letargia
+2024;31;20/3/2024;CABA;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;5;19/3/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;32;25/3/2024;San Luis;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;4;24/3/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;33;25/3/2024;Santa Cruz;F;No;Si;Si;No;Hisopado  sofaríngeo; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;28;24/3/2024;Si;No;No;No;No;Si;No;No;No;Úlceras bucales y pápulas
+2024;34;1/4/2024;Buenos Aires; ;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;31/3/2024;Si;No;No;No;No;Si;No;No;No;Úlceras bucales
+2024;35;1/4/2024;Río Negro;m;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;8;31/3/2024;Si;Si;Si;No;No;No;Si;No;Si;Excitación psicomotriz
+2024;36;5/4/2024;Río Negro;M;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;8;4/4/2024;Si;Si;Si;No;No;No;Si;No;Si; 
+2024;37;5/4/2024;Tierra del Fuego;M;Si;Si;No;Si; ;Positivo;P;Positivo;P;ME01;Meningoencefalitis;4;4/4/2024;Si;Si;Si;Si;Si;No;No;No;Si; 
+2024;38;10/4/2024;CABA;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;5;9/4/2024;Si;Si;Si;Si;No;No;No;No;Si;Somnolencia
+2024;39;10/4/2024;Buenos Aires;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;3;9/4/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;40;15/4/2024;CABA;m;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;3;14/4/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;41;15/4/2024;Córdoba;M;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;51;14/4/2024;Si;No;No;No;No;Si;No;No;No;E ntema oral
+2024;42;20/4/2024;Córdoba;M;No;Si;Si;No;Hisopado  sofaríngeo; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;19/4/2024;Si;No;No;No;No;Si;No;No;No;Vesículas podales
+2024;43;20/4/2024;Santa Fe;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;6;19/4/2024;Si;Si;Si;No;No;No;Si;No;Si;Deterioro del sensorio
+2024;44;25/4/2024;Santa Fe;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;7;24/4/2024;Si;Si;Si;No;No;No;Si;No;Si;Excitación psicomotriz
+2024;45;25/4/2024;Mendoza;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;5;24/4/2024;Si;Si;Si;Si;No;No;No;No;Si;Somnolencia
+2024;46;1/5/2024;Mendoza;M;Si;Si;No;Si; ;Positivo;P;Positivo;P;ME01;Meningoencefalitis;4;30/4/2024;Si;Si;Si;Si;Si;No;No;No;Si; 
+2024;47;1/5/2024;Tucumán;f;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;54;30/4/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;48;5/5/2024;Tucumán;f;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;61;4/5/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;49;5/5/2024;Salta;F;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;4/5/2024;Si;No;No;No;No;Si;No;No;No;Pápulas palmoplantares
+2024;50;10/5/2024;Salta;F;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;9/5/2024;Si;No;No;No;No;Si;No;No;No;E ntema oral
+2024;51;10/5/2024;CABA;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;7;9/5/2024;Si;Si;Si;No;No;No;Si;No;Si;Confusión
+2024;52;15/5/2024;Corrientes;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;88;14/5/2024;Si;Si;Si;No;No;No;Si;No;Si;Desorientación
+2024;53;15/5/2024;Neuquén;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;14/5/2024;Si;Si;Si;Si;Si;No;No;No;Si; 
+2024;54;20/5/2024;Neuquén;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;19/5/2024;Si;Si;Si;Si;No;No;No;No;Si;Bradipsiquia
+2024;55;20/5/2024;Chaco;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;6;19/5/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;56;25/5/2024;Chaco;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;5;24/5/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;57;25/5/2024;Entre Ríos;m;No;Si;Si;No;Hisopado  sal; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;24/5/2024;Si;No;No;No;No;Si;No;No;No;Vesículas peribucales
+2024;58;1/6/2024;Entre Ríos; ;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;22;31/5/2024;Si;No;No;No;No;Si;No;No;No;Máculas palmoplantares
+2024;59;1/6/2024;CABA;M;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;8;31/5/2024;Si;Si;Si;No;No;No;Si;No;Si;Agitación
+2024;60;5/6/2024;La Pampa;F;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;6;4/6/2024;Si;Si;Si;No;No;No;Si;No;Si;Alteración del sensorio
+2024;61;5/6/2024;Formosa;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;4/6/2024;Si;Si;Si;Si;No;No;No;No;Si;Bradipsiquia
+2024;62;10/6/2024;Formosa;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;9/6/2024;Si;Si;Si;Si;Si;No;No;No;Si; 
+2024;63;10/6/2024;Misiones;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;5;9/6/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;64;15/6/2024;Misiones;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;83;14/6/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;65;15/6/2024;Jujuy;F;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;14/6/2024;Si;No;No;No;No;Si;No;No;No;Lesiones vesiculares acras
+2024;66;20/6/2024;Jujuy;m;No;Si;Si;No;Hisopado  sal; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;19/6/2024;Si;No;No;No;No;Si;No;No;No;Pápulas en pies
+2024;67;20/6/2024;Catamarca;m;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;70;19/6/2024;Si;Si;Si;No;No;No;Si;No;Si;Alteración de conciencia
+2024;68;25/6/2024;Catamarca;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;17;24/6/2024;Si;Si;Si;No;No;No;Si;No;Si;Confusión mental
+2024;69;25/6/2024;CABA;M;Si;Si;No;Si; ;Positivo;P;Positivo;P;ME01;Meningoencefalitis;38;24/6/2024;Si;Si;Si;Si;Si;No;No;No;Si;Irritabilidad
+2024;70;1/7/2024;La Rioja;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;5;30/6/2024;Si;Si;Si;Si;No;No;No;No;Si;Irritabilidad
+2024;71;1/7/2024;San Juan;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;4;30/6/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;72;5/7/2024;San Juan;M;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;4;4/7/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;73;5/7/2024;San Luis;M;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;4/7/2024;Si;No;No;No;No;Si;No;No;No;Máculas manos y pies
+2024;74;10/7/2024;San Luis;f;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;9/7/2024;Si;No;No;No;No;Si;No;No;No;Vesículas peribucales
+2024;75;10/7/2024;Santa Cruz;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;6;9/7/2024;Si;Si;Si;No;No;No;Si;No;Si;Desorientación
+2024;76;15/7/2024;Santa Cruz;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;8;14/7/2024;Si;Si;Si;No;No;No;Si;No;Si;Deterioro del sensorio
+2024;77;15/7/2024;Río Negro;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;5;14/7/2024;Si;Si;Si;Si;No;No;No;No;Si;Letargia
+2024;78;20/7/2024;Río Negro;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;19/7/2024;Si;Si;Si;Si;Si;No;No;No;Si; 
+2024;79;20/7/2024;Tierra del Fuego;f;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;3;19/7/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;80;25/7/2024;Tierra del Fuego;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;6;24/7/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;81;25/7/2024;Buenos Aires;F;No;Si;Si;No;Hisopado  sofaríngeo; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;24/7/2024;Si;No;No;No;No;Si;No;No;No;Exantema vesicular
+2024;82;1/8/2024;Buenos Aires; ;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;31;31/7/2024;Si;No;No;No;No;Si;No;No;No;Lesiones vesiculares manos
+2024;83;1/8/2024;Córdoba;M;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;18;31/7/2024;Si;Si;Si;No;No;No;Si;No;Si;Deterioro del sensorio
+2024;84;5/8/2024;CABA;M;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;7;4/8/2024;Si;Si;Si;No;No;No;Si;No;Si;Agitación
+2024;85;5/8/2024;Santa Fe;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;4/8/2024;Si;Si;Si;Si;Si;No;No;No;Si; 
+2024;86;10/8/2024;Santa Fe;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;9/8/2024;Si;Si;Si;Si;No;No;No;No;Si;Letargia
+2024;87;10/8/2024;Mendoza;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;6;9/8/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;88;15/8/2024;Mendoza;m;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;55;14/8/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;89;15/8/2024;Tucumán; ;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;14/8/2024;Si;No;No;No;No;Si;No;No;No;Aftas bucales
+2024;90;20/8/2024;Tucumán;M;No;Si;Si;No;Hisopado  sofaríngeo; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;19/8/2024;Si;No;No;No;No;Si;No;No;No;Aftas bucales
+2024;91;20/8/2024;Salta;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;7;19/8/2024;Si;Si;Si;No;No;No;Si;No;Si;Excitación psicomotriz
+2024;92;25/8/2024;Salta;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;6;24/8/2024;Si;Si;Si;No;No;No;Si;No;Si;Desorientación
+2024;93;25/8/2024;Corrientes;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;24/8/2024;Si;Si;Si;Si;No;No;No;No;Si;Somnolencia
+2024;94;1/9/2024;Corrientes;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;31/8/2024;Si;Si;Si;Si;Si;No;No;No;Si;Somnolencia
+2024;95;1/9/2024;Neuquén;F;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;15;31/8/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;96;5/9/2024;CABA;F;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;4;4/9/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;97;5/9/2024;Chaco;m;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;4/9/2024;Si;No;No;No;No;Si;No;No;No;Vesículas orales y podales
+2024;98;10/9/2024;Chaco;m;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;9/9/2024;Si;No;No;No;No;Si;No;No;No;Erupción vesicular acral
+2024;99;10/9/2024;Entre Ríos;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;8;9/9/2024;Si;Si;Si;No;No;No;Si;No;Si;Confusión mental
+2024;100;15/9/2024;Entre Ríos;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;8;14/9/2024;Si;Si;Si;No;No;No;Si;No;Si;Confusión
+2024;101;15/9/2024;La Pampa;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;14/9/2024;Si;Si;Si;Si;Si;No;No;No;Si; 
+2024;102;20/9/2024;La Pampa;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;5;19/9/2024;Si;Si;Si;Si;No;No;No;No;Si; 
+2024;103;20/9/2024;Formosa;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;3;19/9/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;104;25/9/2024;Formosa;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;3;24/9/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;105;25/9/2024;Misiones;F;No;Si;Si;No;Hisopado  sal; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;11;24/9/2024;Si;No;No;No;No;Si;No;No;No;Úlceras orales y pápulas
+2024;106;1/10/2024;Misiones;f;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;30/9/2024;Si;No;No;No;No;Si;No;No;No;Exantema maculopapular
+2024;107;1/10/2024;Jujuy;m;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;36;30/9/2024;Si;Si;Si;No;No;No;Si;No;Si;Alteración del sensorio
+2024;108;5/10/2024;CABA;F;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;7;4/10/2024;Si;Si;Si;No;No;No;Si;No;Si;Alteración de conciencia
+2024;109;5/10/2024;Catamarca;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;5;4/10/2024;Si;Si;Si;Si;No;No;No;No;Si;Irritabilidad
+2024;110;10/10/2024;Catamarca;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;9/10/2024;Si;Si;Si;Si;Si;No;No;No;Si;Irritabilidad
+2024;111;10/10/2024;La Rioja;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;84;9/10/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;112;15/10/2024;La Rioja;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;6;14/10/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;113;15/10/2024;San Juan;M;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;62;14/10/2024;Si;No;No;No;No;Si;No;No;No;E ntema y exantema
+2024;114;20/10/2024;San Juan; ;No;Si;Si;No;Hisopado  sal; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;19/10/2024;Si;No;No;No;No;Si;No;No;No;Vesículas palmoplantares
+2024;115;20/10/2024;San Luis;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;7;19/10/2024;Si;Si;Si;No;No;No;Si;No;Si;Agitación
+2024;116;25/10/2024;San Luis;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;8;24/10/2024;Si;Si;Si;No;No;No;Si;No;Si;Excitación psicomotriz
+2024;117;25/10/2024;Santa Cruz;M;Si;Si;No;Si; ;Positivo;P;Positivo;P;ME01;Meningoencefalitis;3;24/10/2024;Si;Si;Si;Si;Si;No;No;No;Si;Letargia
+2024;118;1/11/2024;Santa Cruz;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;31/10/2024;Si;Si;Si;Si;No;No;No;No;Si;Letargia
+2024;119;1/11/2024;Río Negro;f;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;6;31/10/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;120;5/11/2024;CABA;m;Si;Si;No;Si; ;Positivo;P;Positivo;P;M01;Meningitis;5;4/11/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;121;5/11/2024;Tierra del Fuego;F;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;4/11/2024;Si;No;No;No;No;Si;No;No;No;Lesiones mano-pie-boca
+2024;122;10/11/2024;Tierra del Fuego;M;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;9/11/2024;Si;No;No;No;No;Si;No;No;No;Úlceras orales
+2024;123;10/11/2024;Buenos Aires;M;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;8;9/11/2024;Si;Si;Si;No;No;No;Si;No;Si;Desorientación
+2024;124;15/11/2024;Buenos Aires;F;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;6;14/11/2024;Si;Si;Si;No;No;No;Si;No;Si;Deterioro del sensorio
+2024;125;15/11/2024;Córdoba;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;14/11/2024;Si;Si;Si;Si;No;No;No;No;Si;Bradipsiquia
+2024;126;20/11/2024;Córdoba;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;4;19/11/2024;Si;Si;Si;Si;Si;No;No;No;Si; 
+2024;127;20/11/2024;Santa Fe;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;5;19/11/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;128;25/11/2024;Santa Fe;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;3;24/11/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;129;25/11/2024;Mendoza;m;No;Si;Si;No;Hisopado  sofaríngeo; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;24/11/2024;Si;No;No;No;No;Si;No;No;No;Vesículas palmares y plantares
+2024;130;1/12/2024;Mendoza;m;No;Si;Si;No; ; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;30/11/2024;Si;No;No;No;No;Si;No;No;No;Pápulas en manos y pies
+2024;131;1/12/2024;Tucumán;M;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;7;30/11/2024;Si;Si;Si;No;No;No;Si;No;Si;Confusión
+2024;132;5/12/2024;Tucumán;M;Si;No;Si;Si; ;Positivo;P;Positivo;P;E01;Encefalitis;7;4/12/2024;Si;Si;Si;No;No;No;Si;No;Si;Desorientación
+2024;133;5/12/2024;CABA;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;3;4/12/2024;Si;Si;Si;Si;Si;No;No;No;Si;Somnolencia
+2024;134;10/12/2024;Salta;F;Si;Si;No;Si; ;Positivo;P;Negativo;N;ME01;Meningoencefalitis;5;9/12/2024;Si;Si;Si;Si;No;No;No;No;Si;Bradipsiquia
+2024;135;10/12/2024;Corrientes;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;4;9/12/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;136;15/12/2024;Corrientes;M;Si;Si;No;Si; ;Positivo;P;Negativo;N;M01;Meningitis;4;14/12/2024;Si;Si;Si;Si;Si;No;No;No;No; 
+2024;137;15/12/2024;Neuquén;F;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;1;14/12/2024;Si;No;No;No;No;Si;No;No;No;Erupción vesicular acral
+2024;138;20/12/2024;CABA;f;No;Si;Si;No;Hisopado  sofaríngeo; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;2;19/12/2024;Si;No;No;No;No;Si;No;No;No;Lesiones vesiculares periorales
+2024;139;20/12/2024;Chaco; ;Si;No;Si;Si; ;Positivo;P;Negativo;N;E01;Encefalitis;6;19/12/2024;Si;Si;Si;No;No;No;Si;No;Si;Deterioro del sensorio
+2024;140;25/12/2024;Entre Ríos;M;Si;Si;No;Si; ;Positivo;P;Positivo;P;ME01;Meningoencefalitis;5;24/12/2024;Si;Si;Si;Si;No;No;No;No;Si;Irritabilidad
+2024;113;15/10/2024;San Juan;M;No;Si;Si;No;Saliva; ; ;Positivo;P;EMPB01;Enfermedad mano pie boca;62;14/10/2024;Si;No;No;No;No;Si;No;No;No;E ntema y exantema
