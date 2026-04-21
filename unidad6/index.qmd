@@ -46,7 +46,7 @@ La **estadística inferencial** es la rama que permite formular conclusiones sob
 Se apoya en dos actividades principales:
 
 1.  **Estimación de parámetros**: Calcular valores aproximados de parámetros poblacionales desconocidos (ej. prevalencia de una enfermedad).
-2.  **Pruebas de hipótesis**: Evaluar afirmaciones sobre uno o más parámetros basándose en evidencia estadística.
+2.  **Pruebas de hipótesis**: Evaluar afirmaciones sobre uno o más parámetros basándose en evidencia estadística (habitualmente comparaciones).
 
 :::
 
@@ -98,14 +98,14 @@ La **distribución muestral** permite cuantificar la incertidumbre asociada a es
 Cada tipo diferente de variable posee, según su naturaleza, una distribución muestral probabilística que la caracteriza (Normal, Poisson, binomial, etc).
 
 
-## Contexto relevante{.title-top}
+## Definiciones relevantes {.title-top}
 
 <br>
 
 ::: {.fragment .fade-in-then-semi-out}
 
 **Distribución muestral**
-La distribución muestral de un estadístico es la distribución de todos los valores posibles que ese estadístico puede tomar al calcularse en muestras aleatorias del mismo tamaño extraídas de una misma población. Este concepto es central en la inferencia estadística, ya que permite cuantificar la incertidumbre asociada a las estimaciones.
+Es la distribución de todos los valores posibles que el estadístico puede tomar al calcularse en muestras aleatorias del mismo tamaño extraídas de una misma población. Este concepto es central en la inferencia estadística, ya que permite cuantificar la incertidumbre asociada a las estimaciones.
 
 :::
 
@@ -113,6 +113,53 @@ La distribución muestral de un estadístico es la distribución de todos los va
 
 **Teoría del muestreo**
 Estudio de las técnicas de selección que garantizan la representatividad y permiten cuantificar el error de nuestras estimaciones. Utiliza el azar y el método para analizar la relación entre los estadísticos de la muestra y los parámetros de la población midiendo su incertidumbre. 
+
+:::
+
+## Distribución Normal {.title-top}
+
+
+:::: {.columns"}
+
+::: {.column width="50%"}
+
+- Es una distribución de probabilidad continua para una variable aleatoria, caracterizada por su forma simétrica de campana.
+
+- La curva es simétrica respecto a su centro. Esto implica que la media, la mediana y la moda coinciden en el mismo valor central.
+
+- Está definida por dos parámetros: la media (determina la ubicación del centro de la distribución) y la varianza o desvío estándar (determina qué tan "ancha" o "delgada" es la campana).
+
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 100%
+knitr::include_graphics("images/Normal.png")
+```
+
+:::
+::::
+
+
+## Teorema del Límite Central (TLC) {.title-top}
+
+<br>
+
+::: incremental
+
+- Si se toman muestras aleatorias de tamaño $n$ de cualquier población (incluso no Normal), la distribución de las **medias muestrales** tenderá a seguir una distribución Normal a medida que $n$ aumenta.
+
+- Plantea que la media de los promedios es igual a la media de la población.
+
+- Y que la variabilidad de los promedios (denominada error estándar) disminuye al aumentar el tamaño de la muestra $EE = \frac{\sigma}{\sqrt{n}}$
+
+- Es el "puente" que justifica el uso de tests paramétricos (como el t-test o ANOVA) y el cálculo de intervalos de confianza en poblaciones que no siguen exactamente una campana de Gauss pero se aproximan.
 
 :::
 
@@ -124,9 +171,11 @@ $$ IC = \text{estimador puntual} \pm (\text{coef. de confiabilidad}) \times (\te
 ```{r}
 #| echo: false
 #| fig-align: center
-#| out-width: 50%
+#| out-width: 40%
 knitr::include_graphics("images/IC_media.JPG")
 ```
+
+IC para la media basado en la distribución Normal
 
 . . .
 
@@ -141,13 +190,21 @@ knitr::include_graphics("images/IC_media.JPG")
 - **Nivel de confianza**: A mayor confianza ($1-\alpha$), es decir mayor probabilidad que el parámetro se encuentre en el intervalo, mayor amplitud.
 - **Tamaño muestral ($n$)**: Al aumentar $n$, disminuye el error estándar y el IC se vuelve más preciso.
 
-$$SE_{\bar{x}} = \frac{s}{\sqrt{n}}$$
+$$EE_{\bar{x}} = \frac{s}{\sqrt{n}}$$
 
+## Intervalos de Confianza (IC) {.title-top}
 
+<br>
+
+- Se pueden calcular IC de distribuciones aproximadas a la Normal mediante el esquema anterior.
+
+- Si la distribucion es sesgada y/o tiene outliers conviene usar la mediana e IC calculados por métodos no paramétricos para conseguir estadísticos robustos.
+
+- Aprovechando la capacidad computacional actual se pueden calcular mediante bootstrap (remuestreo).
 
 ## IC en R: Paquete `DescTools` {.title-top}
 
-Aunque no es compatible de forma directa con *tidyverse*, el paquete `DescTools` facilita estos cálculos.
+Aunque no es compatible de forma directa con *tidyverse*, el paquete `DescTools` facilita estos cálculos. Posee funciones para la media y la mediana con métodos ortodoxos y de remuestreo.
 
 ```{r, echo=TRUE, eval=FALSE}
 library(DescTools)
@@ -171,6 +228,7 @@ base |>
 #| out-width: 30%
 knitr::include_graphics("images/resultado_IC.JPG")
 ```
+
 
 ## Pruebas de hipótesis {.title-top .smaller}
 
@@ -330,6 +388,40 @@ Preguntas que debo responder:
 #| out-width: 70%
 knitr::include_graphics("images/flujo_var_cuanti.JPG")
 ```
+
+## Inferencia de datos categóricos  {.title-top}
+
+<br>
+
+- Prueba de $X^2$ (Chi-cuadrado): en tablas $2x2$ y $2xn$. Con muestras independientes, para homogeneidad, tendencia y bondad de ajuste
+
+- Prueba Exacta de Fisher: Crucial cuando los tamaños de muestra son pequeños en tablas de contingencia (o celdas con $n<5$)
+
+- Prueba de McNemar: Pruebas pareadas (antes-después)
+
+<br>
+
+```{r, echo=FALSE}
+library(flextable)
+
+datos <- matrix(c("Expuesto", "No expuesto", "Total", "a", "b", "a+b", "c", "d", "c+d", "a+c", "b+d", "a+b+c+d"), nrow = 3)
+
+# 2. Asignar nombres a las filas (usualmente el desenlace o enfermedad)
+colnames(datos) <- c("-", "Enfermo", "Sano", "Total")
+
+# 4. Convertirlo formalmente en una tabla (opcional, mejora la visualización)
+tabla_2x2 <- as.data.frame(datos)
+
+# Mostrar el resultado
+flextable(tabla_2x2) |>
+  fontsize(size = 28, part = "all")  |> 
+  autofit() |> 
+  theme_box()  
+  
+
+```
+
+
 
 ## El balance de la inferencia estadística {.title-top}
 
