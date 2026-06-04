@@ -98,14 +98,14 @@ La **distribución muestral** permite cuantificar la incertidumbre asociada a es
 Cada tipo diferente de variable posee, según su naturaleza, una distribución muestral probabilística que la caracteriza (Normal, Poisson, binomial, etc).
 
 
-## Definiciones relevantes {.title-top}
+## Contexto relevante{.title-top}
 
 <br>
 
 ::: {.fragment .fade-in-then-semi-out}
 
 **Distribución muestral**
-Es la distribución de todos los valores posibles que el estadístico puede tomar al calcularse en muestras aleatorias del mismo tamaño extraídas de una misma población. Este concepto es central en la inferencia estadística, ya que permite cuantificar la incertidumbre asociada a las estimaciones.
+La distribución muestral de un estadístico es la distribución de todos los valores posibles que ese estadístico puede tomar al calcularse en muestras aleatorias del mismo tamaño extraídas de una misma población. Este concepto es central en la inferencia estadística, ya que permite cuantificar la incertidumbre asociada a las estimaciones.
 
 :::
 
@@ -127,7 +127,7 @@ Estudio de las técnicas de selección que garantizan la representatividad y per
 
 - La curva es simétrica respecto a su centro. Esto implica que la media, la mediana y la moda coinciden en el mismo valor central.
 
-- Está definida por dos parámetros: la media (determina la ubicación del centro de la distribución) y la varianza o desvío estándar (determina qué tan "ancha" o "delgada" es la campana).
+- Está definida por dos parámetros: la media (determina la ubicación del centro de la distribución) y la varianza o desvió estándar (determina qué tan "ancha" o "delgada" es la campana.
 
 
 :::
@@ -159,7 +159,7 @@ knitr::include_graphics("images/Normal.png")
 
 - Y que la variabilidad de los promedios (denominada error estándar) disminuye al aumentar el tamaño de la muestra $EE = \frac{\sigma}{\sqrt{n}}$
 
-- Es el "puente" que justifica el uso de tests paramétricos (como el t-test o ANOVA) y el cálculo de intervalos de confianza en poblaciones que no siguen exactamente una campana de Gauss pero se aproximan.
+- Es el "puente" que justifica el uso de tests paramétricos (como el t-test o ANOVA) y el cálculo de intervalos de confianza en poblaciones que no siguen exactamente una campana de Gauss
 
 :::
 
@@ -228,7 +228,6 @@ base |>
 #| out-width: 30%
 knitr::include_graphics("images/resultado_IC.JPG")
 ```
-
 
 ## Pruebas de hipótesis {.title-top .smaller}
 
@@ -391,35 +390,9 @@ knitr::include_graphics("images/flujo_var_cuanti.JPG")
 
 ## Inferencia de datos categóricos  {.title-top}
 
-<br>
+Prueba de $X^2$ (Chi-cuadrado): Para independencia y bondad de ajuste
 
-- Prueba de $X^2$ (Chi-cuadrado): en tablas $2x2$ y $2xn$. Con muestras independientes, para homogeneidad, tendencia y bondad de ajuste
-
-- Prueba Exacta de Fisher: Crucial cuando los tamaños de muestra son pequeños en tablas de contingencia (o celdas con $n<5$)
-
-- Prueba de McNemar: Pruebas pareadas (antes-después)
-
-<br>
-
-```{r, echo=FALSE}
-library(flextable)
-
-datos <- matrix(c("Expuesto", "No expuesto", "Total", "a", "b", "a+b", "c", "d", "c+d", "a+c", "b+d", "a+b+c+d"), nrow = 3)
-
-# 2. Asignar nombres a las filas (usualmente el desenlace o enfermedad)
-colnames(datos) <- c("-", "Enfermo", "Sano", "Total")
-
-# 4. Convertirlo formalmente en una tabla (opcional, mejora la visualización)
-tabla_2x2 <- as.data.frame(datos)
-
-# Mostrar el resultado
-flextable(tabla_2x2) |>
-  fontsize(size = 28, part = "all")  |> 
-  autofit() |> 
-  theme_box()  
-  
-
-```
+Prueba Exacta de Fisher: Crucial cuando los tamaños de muestra son pequeños en tablas de contingencia
 
 
 
