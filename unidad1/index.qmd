@@ -192,6 +192,18 @@ Estas fechas pueden sufrir cambios como resultado del desarrollo de la cursada.
 :::
 
 
+## Consejos cuando trabajamos con datos {.title-top}
+
+<br>
+<br>
+
+1.  Definir claramente la **unidad de análisis** antes de recolectar/analizar.
+2.  Mantener un **diccionario de datos** actualizado (incluyendo variables construidas).
+3.  Saber el **tipo de variable** para elegir análisis y gráfico adecuado.
+4.  Guardar metadatos y versión de los archivos.
+
+
+
 ## Lenguaje R {.title-top}
 
 ![](images/R.png){.absolute top="10" left="1600" width="300"}
@@ -513,7 +525,7 @@ Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que se
 
 - Tienen dos dimensiones, las columnas verticales llamadas **variables** y las filas horizontales llamadas **observaciones**.
 
-- Las columnas pueden ser de diferentes tipos, pero todas las filas de cada columna pueden tener un mismo tipo de dato.
+- Las columnas pueden ser de diferentes tipos, pero todas las filas de cada columna deben tener un mismo tipo de dato.
 
 - La combinación de datos de las diferentes columnas que conforman una fila es fija, por lo que se asegura la integridad de estas observaciones (principio de las bases de datos).
 
@@ -602,51 +614,6 @@ Ejemplo: `pacientes` (id_paciente) ↔ `consultas` (id_consulta, id_paciente).
 <br>
 
 **Ventaja:** evitar duplicación y mantener consistencia en datos complejos.
-
-## Metadatos
-
-<br>
-
-::: incremental
--   *"Datos sobre los datos":* describen origen, fecha, definiciones, responsable.
--   Incluyen a los diccionarios de datos (siempre deben acompañar a las tablas de datos)
--   Ejemplos: fecha de actualización, fuente, variables derivadas, formato.
-:::
-
-. . .
-
-<br>
-
-**Por qué son críticos?:** permiten interpretar correctamente y mantener trazabilidad.
-
-## Diccionario de datos {.title-top}
-
-<br>
-
-::: {style="font-size: 100%;"}
-Delimitador de variables: ;
-
-Delimitador de decimales: ,
-
-| Variable           |       Tipo | Descripción           | Valores posibles |
-|--------------------|-----------:|-----------------------|------------------|
-| id_caso            |   numérico | Identificador único   | 1,2,3...         |
-| edad               |   numérico | Edad en años          | 0–120            |
-| sexo               | categórica | Sexo biológico        | M, F, O          |
-| fecha_notificacion |      fecha | Fecha de notificación | AAAA-MM-DD       |
-| diagnostico        | categórica | Código CIE10          | Formato CIE10    |
-:::
-
-## Consejos cuando trabajamos con datos {.title-top}
-
-<br>
-<br>
-
-1.  Definir claramente la **unidad de análisis** antes de recolectar/analizar.
-2.  Mantener un **diccionario de datos** actualizado (incluyendo variables construidas).
-3.  Saber el **tipo de variable** para elegir análisis y gráfico adecuado.
-4.  Guardar metadatos y versión de los archivos.
-
 
 
 ## Errores y advertencias {.title-top}
