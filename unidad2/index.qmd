@@ -261,15 +261,56 @@ Si lo que buscamos es mantener a todas las observaciones de la tabla pero marcar
 
 ## Datos ausentes (NA´s) {.title-top}
 
-Los datos ausentes o perdidos (en inglés conocidos como missing) generalmente pueden ser:
+<br>
+
+- Los valores ausentes (`NA` en R) son, además de problemas  técnicos en nuestros datos, decisiones analíticas con consecuencias concretas sobre la validez de las estimaciones.
+
+- Ignorarlos o tratarlos de forma descuidada puede introducir sesgo de selección, alterar la representatividad de la muestra e implicar supuestos implícitos sobre el
+proceso que generó los datos.
+
+- Por eso, antes de continuar con el análisis, es indispensable entender qué está pasando con los valores
+ausentes.
+
+## Datos ausentes (NA´s) {.title-top}
+
+<br>
+
+Estos datos ausentes generalmente pueden ser:
+
+. . .
 
 - **Informativos**: Implican una causa estructural en la recopilación de los datos o anomalías en el entorno de observación.
+
+. . .
+
 - **Aleatorios**: tienen lugar independientemente del proceso de recopilación de datos.
+
+. . .
 
 A los primeros se le suele asignar un valor concreto ("S/D", etc.) y tenerlos en cuenta en el conteo de frecuencias, en cambio a los segundos se los elimina o imputa dependiendo de la situación.
 
+. . .
+
 Antes de decidir el procedimiento a seguir, debemos detectarlos y describirlos, pero siempre habrá que informar lo que se hizo con ellos.
 
+
+## Datos ausentes (NA´s) {.title-top}
+
+<br>
+
+La respuesta de qué hacer con esos valores ausentes es inherente a cada situación particular en la que estemos. No hay una solución mágica ni automática para todos los casos.
+
+. . .
+
+Siempre habrá que sospechar que esos NA son información valiosa y tendremos que descartar un patrón de ausencia subyacente.
+
+. . .
+
+Apliquemos la solución que definamos, previamente tenemos que:
+
+- detectar y cuantificar los NA
+- explorar la estructura de los NA 
+- decidir y documentar
 
 ## Manejo de NA's con naniar {.title-top}
 
@@ -284,17 +325,17 @@ El paquete **naniar** reúne funciones para el manejo de valores faltantes (NA e
 
 <br>
 
--   Proporciona funciones analíticas y visuales de detección y gestión
+-   Proporciona funciones analíticas y visuales de detección y gestión.
 
--   Es compatible con el mundo *"tidy"* de tidyverse
+-   Es compatible con el ecosistema *"tidy"* de tidyverse
 
--   Posibilita el trabajo de imputación (no lo trataremos en el curso)
+-   Posibilita el trabajo de imputación (aunque no lo trataremos en el curso)
 
 ## Paquete naniar {.title-top}
 
 De las muchas funciones que tiene el paquete seleccionamos algunas para mostrar que son muy útiles para nuestra tarea habitual.
 
-`miss_var_summary()`: proporciona un resumen sobre los valores NA en cada variable del dataframe
+`miss_var_summary()`: proporciona un resumen analítico sobre los valores NA en cada variable del dataframe
 
 `gg_miss_upset()`: genera un gráfico Upset sobre los valores NA de dataframe
 
@@ -306,7 +347,7 @@ De las muchas funciones que tiene el paquete seleccionamos algunas para mostrar 
 
 ## Ejemplo de un UpSet de valores perdidos 
 
-<br>
+Gráfico para explorar posibles patrones de valores ausentes.
 
 ```{r}
 #| echo: false
@@ -333,7 +374,7 @@ datos |>
 
 Una vez finalizadas las correcciones de los problemas encontrados podemos concluir que tenemos nuestros datos "limpios" y debemos almacenarlos.
 
-Para esta tarea, debemos decidir en que formato los guardamos. Se aconseja hacerlo un formato `csv` (texto plano separado por comas), dado que es universal; pero se puede seleccionar otro formato.
+Para esta tarea, tenemos que decidir en que formato los guardamos. Se aconseja hacerlo un formato `csv` (texto plano separado por comas), dado que es universal; pero se puede seleccionar otro formato.
 
 Las funciones de tidyverse (pertenecientes a **readr**) apropiadas para la exportación de datos comienzan con `write_`:
 

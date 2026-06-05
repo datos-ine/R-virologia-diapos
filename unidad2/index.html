@@ -1269,13 +1269,49 @@ margin-right: 0; }
 </section>
 <section id="datos-ausentes-nas" class="slide level2 title-top">
 <h2>Datos ausentes (NA´s)</h2>
-<p>Los datos ausentes o perdidos (en inglés conocidos como missing) generalmente pueden ser:</p>
+<p><br></p>
+<ul>
+<li><p>Los valores ausentes (<code>NA</code> en R) son, además de problemas técnicos en nuestros datos, decisiones analíticas con consecuencias concretas sobre la validez de las estimaciones.</p></li>
+<li><p>Ignorarlos o tratarlos de forma descuidada puede introducir sesgo de selección, alterar la representatividad de la muestra e implicar supuestos implícitos sobre el proceso que generó los datos.</p></li>
+<li><p>Por eso, antes de continuar con el análisis, es indispensable entender qué está pasando con los valores ausentes.</p></li>
+</ul>
+</section>
+<section id="datos-ausentes-nas-1" class="slide level2 title-top">
+<h2>Datos ausentes (NA´s)</h2>
+<p><br></p>
+<p>Estos datos ausentes generalmente pueden ser:</p>
+<div class="fragment">
 <ul>
 <li><strong>Informativos</strong>: Implican una causa estructural en la recopilación de los datos o anomalías en el entorno de observación.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
 <li><strong>Aleatorios</strong>: tienen lugar independientemente del proceso de recopilación de datos.</li>
 </ul>
+</div>
+<div class="fragment">
 <p>A los primeros se le suele asignar un valor concreto (“S/D”, etc.) y tenerlos en cuenta en el conteo de frecuencias, en cambio a los segundos se los elimina o imputa dependiendo de la situación.</p>
+</div>
+<div class="fragment">
 <p>Antes de decidir el procedimiento a seguir, debemos detectarlos y describirlos, pero siempre habrá que informar lo que se hizo con ellos.</p>
+</div>
+</section>
+<section id="datos-ausentes-nas-2" class="slide level2 title-top">
+<h2>Datos ausentes (NA´s)</h2>
+<p><br></p>
+<p>La respuesta de qué hacer con esos valores ausentes es inherente a cada situación particular en la que estemos. No hay una solución mágica ni automática para todos los casos.</p>
+<div class="fragment">
+<p>Siempre habrá que sospechar que esos NA son información valiosa y tendremos que descartar un patrón de ausencia subyacente.</p>
+</div>
+<div class="fragment">
+<p>Apliquemos la solución que definamos, previamente tenemos que:</p>
+<ul>
+<li>detectar y cuantificar los NA</li>
+<li>explorar la estructura de los NA</li>
+<li>decidir y documentar</li>
+</ul>
+</div>
 </section>
 <section id="manejo-de-nas-con-naniar" class="slide level2 title-top">
 <h2>Manejo de NA’s con naniar</h2>
@@ -1284,15 +1320,15 @@ margin-right: 0; }
 <p>El paquete <strong>naniar</strong> reúne funciones para el manejo de valores faltantes (NA en R).</p>
 <p><br></p>
 <ul>
-<li><p>Proporciona funciones analíticas y visuales de detección y gestión</p></li>
-<li><p>Es compatible con el mundo <em>“tidy”</em> de tidyverse</p></li>
-<li><p>Posibilita el trabajo de imputación (no lo trataremos en el curso)</p></li>
+<li><p>Proporciona funciones analíticas y visuales de detección y gestión.</p></li>
+<li><p>Es compatible con el ecosistema <em>“tidy”</em> de tidyverse</p></li>
+<li><p>Posibilita el trabajo de imputación (aunque no lo trataremos en el curso)</p></li>
 </ul>
 </section>
 <section id="paquete-naniar" class="slide level2 title-top">
 <h2>Paquete naniar</h2>
 <p>De las muchas funciones que tiene el paquete seleccionamos algunas para mostrar que son muy útiles para nuestra tarea habitual.</p>
-<p><code>miss_var_summary()</code>: proporciona un resumen sobre los valores NA en cada variable del dataframe</p>
+<p><code>miss_var_summary()</code>: proporciona un resumen analítico sobre los valores NA en cada variable del dataframe</p>
 <p><code>gg_miss_upset()</code>: genera un gráfico Upset sobre los valores NA de dataframe</p>
 <p><code>replace_with_na()</code>: reemplaza valores específicos con valores NA</p>
 <p><code>replace_na_with()</code>: reemplaza valores NA con valores específicos</p>
@@ -1304,7 +1340,7 @@ margin-right: 0; }
 </section>
 <section id="ejemplo-de-un-upset-de-valores-perdidos" class="slide level2">
 <h2>Ejemplo de un UpSet de valores perdidos</h2>
-<p><br></p>
+<p>Gráfico para explorar posibles patrones de valores ausentes.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1319,7 +1355,7 @@ margin-right: 0; }
 <h2>Exportar datos limpios</h2>
 <p><br></p>
 <p>Una vez finalizadas las correcciones de los problemas encontrados podemos concluir que tenemos nuestros datos “limpios” y debemos almacenarlos.</p>
-<p>Para esta tarea, debemos decidir en que formato los guardamos. Se aconseja hacerlo un formato <code>csv</code> (texto plano separado por comas), dado que es universal; pero se puede seleccionar otro formato.</p>
+<p>Para esta tarea, tenemos que decidir en que formato los guardamos. Se aconseja hacerlo un formato <code>csv</code> (texto plano separado por comas), dado que es universal; pero se puede seleccionar otro formato.</p>
 <p>Las funciones de tidyverse (pertenecientes a <strong>readr</strong>) apropiadas para la exportación de datos comienzan con <code>write_</code>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href></a><span class="co"># archivo con comas</span></span>
