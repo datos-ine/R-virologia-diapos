@@ -201,7 +201,7 @@ La función `get_dupes()` del paquete **janitor** es una herramienta útil para 
 
 Si usamos el `get_dupes()` sin definir variables, las incluye a todas, de decir detecta duplicados completos.
 
-Si definimos variables, busca los duplicados en esas combinaciones (útil cuando tenemos una o más variables claves, claves primariaso identificadores que deberían ser únicos)
+Si definimos variables, busca los duplicados en esas combinaciones (útil cuando tenemos una o más variables claves, claves primarias o identificadores que deberían ser únicos -claves compuestas-)
 
 ```{r, eval=FALSE, echo=TRUE}
 library(janitor)
@@ -268,8 +268,7 @@ Si lo que buscamos es mantener a todas las observaciones de la tabla pero marcar
 - Ignorarlos o tratarlos de forma descuidada puede introducir sesgo de selección, alterar la representatividad de la muestra e implicar supuestos implícitos sobre el
 proceso que generó los datos.
 
-- Por eso, antes de continuar con el análisis, es indispensable entender qué está pasando con los valores
-ausentes.
+- Por eso, antes de continuar con el análisis, es indispensable entender qué está pasando con los valores ausentes.
 
 ## Datos ausentes (NA´s) {.title-top}
 
@@ -308,8 +307,8 @@ Siempre habrá que sospechar que esos NA son información valiosa y tendremos qu
 
 Apliquemos la solución que definamos, previamente tenemos que:
 
-- detectar y cuantificar los NA
-- explorar la estructura de los NA 
+- detectar y cuantificar los `NA`
+- explorar la estructura de los `NA` 
 - decidir y documentar
 
 ## Manejo de NA's con naniar {.title-top}
@@ -347,7 +346,7 @@ De las muchas funciones que tiene el paquete seleccionamos algunas para mostrar 
 
 ## Ejemplo de un UpSet de valores perdidos 
 
-Gráfico para explorar posibles patrones de valores ausentes.
+Gráfico para explorar posibles **patrones** de valores ausentes.
 
 ```{r}
 #| echo: false
@@ -367,6 +366,54 @@ datos |>
 ```
 
 
+## Distintas eliminaciones según decisión tomada
+
+<br>
+
+- Si decidimos eliminar una variable completa porque tiene muchos valores ausentes:
+
+```{r, eval=FALSE, echo=TRUE}
+
+nombre_dataframe <- nombre_dataframe |> 
+  select(-var_con_datos_ausentes)
+```
+
+<br>
+
+Usar la función de selección negando la variables en cuestión es suficiente para producir un nuevo dataframe o sobreescribir el original sin ella.
+
+
+
+## Distintas eliminaciones según decisión tomada
+
+<br>
+
+- Si decidimos eliminar todos los valores ausentes de una tabla de datos (proceso menos recomendable en la mayoría de los situaciones):
+
+```{r, eval=FALSE, echo=TRUE}
+
+nombre_dataframe <- na.omit(nombre_dataframe)
+```
+
+<br>
+
+Usar la función `na.omit()` del R base  elimina observaciones enteras donde al menos haya una variable con valores `NA`. Produce una tabla con completitud de datos pero suele disminuir la cantidad de observaciones si la tabla original tiene muchos valores ausentes.
+
+## Distintas eliminaciones según decisión tomada
+
+<br>
+
+- Si decidimos eliminar todos los valores ausentes de determinada variable o variables (`na.omit()` no permite hacerlo)):
+
+```{r, eval=FALSE, echo=TRUE}
+
+nombre_dataframe <- nombre_dataframe |> 
+  drop_na(nombre_variable)
+```
+
+<br>
+
+Usar la función `drop_na()` del paquete tidyr del tidyverse elimina observaciones enteras donde haya valores `NA` dentro de la variable escrita. Produce una tabla con completitud de datos en la variable seleccionada y dependiendo de la cantidad de valores ausentes de dicha variable será la cantidad de observaciones finales que tengamos.
 
 ## Exportar datos limpios {.title-top}
 
