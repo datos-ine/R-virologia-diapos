@@ -119,7 +119,7 @@ Coexisten 2 clases de objetos básicos en el lenguaje R
 
 <br>
 
-> Extraer componentes (día, año, mes, semana, nombre del día, etc)
+> Extraer componentes (día, año, mes, semana epidemiológica, nombre del día, etc)
 
 . . . 
 
@@ -151,7 +151,7 @@ library(tidyverse)
 ```{r}
 #| echo: true
 
-as_date(19881)
+as_date(20628)
 as_date(-1)
 ```
 
@@ -161,7 +161,7 @@ as_date(-1)
 ```{r}
 #| echo: true
 
-as_datetime(1717718401)
+as_datetime(1782345000)
 ```
 
 ## Paquete lubridate {.title-top}
@@ -192,8 +192,8 @@ fecha
 
 year(fecha)
 
-# extraemos la semana epidemiológica
-
+# extraemos la 
+#semana epidemiológica
 epiweek(fecha)
 ```
 :::
@@ -244,8 +244,6 @@ Calculo de tiempo entre dos fechas
 
 <br>
 
-::: columns
-::: {.column width="52%"}
 ```{r}
 #| echo: true
 
@@ -262,9 +260,16 @@ intervalo
 # Las duraciones comienzan con d
 # ejemplo: dyears()
 ```
-:::
 
-::: {.column width="48%"}
+## Operaciones de tiempo {.title-top}
+
+<br>
+
+Calculo de tiempo entre dos fechas
+
+<br>
+
+
 ```{r}
 #| echo: true
 
@@ -276,8 +281,7 @@ intervalo / ddays()
 
 18640 / 365.25 # calculo de años
 ```
-:::
-:::
+
 
 ## Cadenas de caracteres (texto) {.title-top}
 
@@ -455,6 +459,41 @@ Cadenas que comiencen con E y continúen con un número cualquiera
 
 Cadenas que finaliza con alguna letra mayúscula o minúscula
 
+
+## Un ejemplo {.title-top}
+
+```{r}
+#| echo: false
+
+texto <- tribble(
+  ~var_para_extraer,  
+  "12.5 UI/ml",                  
+  "11.4 UI/ml",                 
+  "9.8 UI/ml"
+)
+  
+```
+
+<br>
+
+Tenemos estos valores con unidades que estan en formato character.
+
+```{r}
+texto$var_para_extraer
+
+```
+
+Usando una expresión regular extraemos los valores numéricos.
+
+```{r}
+#| echo: true
+
+texto |> 
+  mutate(valor = as.numeric(str_extract(var_para_extraer,
+                                        pattern = "\\d+\\.\\d+"))) 
+```
+
+
 ## Factores en R {.title-top}
 
 
@@ -534,4 +573,45 @@ Cadenas que finaliza con alguna letra mayúscula o minúscula
 . . .
 
 >   `fct_lump_prop()`: unifica niveles menos frecuentes porcentuales en "otros"
+
+## Ejemplo de factor {.title-top}
+
+<br>
+
+```{r}
+#| echo: false
+
+
+factores <- tribble(
+  ~var_categorica,       ~var_codigo,  
+  "si",              1,    
+  "si",             1,    
+  "no",             2,    
+  "no",            3,    
+  NA,             1 
+)
+```
+
+Valores ordenados naturalmente por el lenguaje R en forma alfabetica
+
+```{r}
+#| echo: true
+
+factores |> 
+  count(var_categorica)
+
+```
+
+## Ejemplo de factor {.title-top}
+
+<br>
+
+Valores reordenados primero "si", luego "no", como factores.
+
+```{r}
+#| echo: true
+factores |> 
+  mutate(var_categorica = fct_relevel(.f = var_categorica, "si")) |> 
+  count(var_categorica)
+```
 
