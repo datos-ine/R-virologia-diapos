@@ -109,7 +109,7 @@ across(.cols,  .fns,  ...,  .names)
 
 <br>
 
-Tomemos la siguiente tabla de datos ficticios (mostramos las primeras 4 observaciones):
+Tomemos la siguiente tabla de datos ficticios de resultados de laboratorio (mostramos las primeras 4 observaciones):
 
 ```{r}
 #| echo: false
@@ -118,16 +118,12 @@ Tomemos la siguiente tabla de datos ficticios (mostramos las primeras 4 observac
 
 library(tidyverse)
 
-set.seed(123)
+datos <- read_csv2("datos/ENT.txt")
 
-datos <- tibble(
-  a = rnorm(10),
-  b = rnorm(10),
-  c = rnorm(10),
-  d = rnorm(10)
-)
+ENT <- datos |> select(ID, Sexo, Colesterol, Glucemia, Trigliceridos) |> na.omit()
 
-datos |> head(4)
+ENT |> slice_head(n = 4)
+
 ```
 
 <br>
@@ -141,11 +137,10 @@ Podríamos hacerlo repitiendo para cada variable
 ```{r}
 #| echo: true
 
-datos |> summarise(
-  a = mean(a),
-  b = mean(b),
-  c = mean(c),
-  d = mean(d),
+ENT |> summarise(
+  media_colesterol = mean(Colesterol),
+  meda_glucemia = mean(Glucemia),
+  media_trigliceridos = mean(Trigliceridos)
 )
 ```
 
@@ -160,9 +155,9 @@ Para solucionarlo aplicamos `across()` y realizamos el resumen simultáneo en un
 ```{r}
 #| echo: true
 
-datos |> summarise(
-  across(.cols = a:d, .fns = mean),
-)
+ENT  |> summarise(
+  across(.cols = Colesterol:Trigliceridos, .fns = mean))
+
 ```
 
 <br>
@@ -171,35 +166,22 @@ Nótese que el primer argumento es el rango de nombres de variables y el segundo
 
 ## Seleccionar variables (**.cols**) {.title-top}
 
-<br>
 
 El primer argumento de `across()` responde de la misma forma que la función `select()` y aplican también las *funciones ayudantes de selección*.
 
 ```{r}
-#| echo: false
-
-datos <- tibble(
-  grupo = sample(2, 10, replace = TRUE),
-  a = rnorm(10),
-  b = rnorm(10),
-  c = rnorm(10),
-  d = rnorm(10)
-)
-```
-
-```{r}
 #| echo: true
 
-names(datos)
+names(ENT)
 
-datos |> 
-  group_by(grupo) |> 
-  summarize(across(everything(), mean))
+ENT |> 
+  select(-ID) |> 
+  group_by(Sexo) |> 
+  summarise(across(everything(), mean))
 ```
 
-## Recordamos a las funciones ayudantes de selección {.title-top .smaller}
+## Recordamos a las funciones ayudantes de selección {.title-top}
 
-<br>
 
 ::: columns
 ::: {.column width="50%"}
@@ -274,23 +256,16 @@ Donde lo hacemos dentro de un `across()`?
 
 Supongamos que tenemos estos datos (mostramos algunas observaciones):
 
+<br>
+
 ```{r}
 #| echo: false
+datos <- datos |> 
+  select(ID, Sexo, Colesterol, Glucemia, Trigliceridos) |> 
+  arrange(Colesterol) 
 
-set.seed(123)
-
-rnorm_na <- function(n, n_na, mean = 0, sd = 1) {
-  sample(c(rnorm(n - n_na, mean = mean, sd = sd), rep(NA, n_na)))
-}
-
-datos_na <- tibble(
-  a = rnorm_na(5, 1),
-  b = rnorm_na(5, 1),
-  c = rnorm_na(5, 2),
-  d = rnorm(5)
-)
-
-datos_na |> head(4)
+datos |> 
+  slice_tail(n = 4)
 ```
 
 <br>
@@ -306,9 +281,9 @@ Si aplicamos el mismo código de `across()` anterior tendríamos como resultado:
 ```{r}
 #| echo: true
 
-datos_na |> 
+datos |> 
   summarise(
-    across(a:d, mean)
+    across(Colesterol:Trigliceridos, mean)
   )
 ```
 
@@ -327,10 +302,9 @@ Existen dos formas sintácticas de hacerlo.
 ```{r}
 #| echo: true
 
-datos_na |> 
+datos |> 
   summarise(
-    across(a:d, \(x) mean(x, na.rm = TRUE))
-  )
+    across(Colesterol:Trigliceridos, \(x) mean(x, na.rm = TRUE)))
 ```
 
 ## Múltiples funciones {.title-top}
@@ -340,12 +314,11 @@ Para incorporar más de una función dentro de `across()` debemos incluirlas den
 ```{r}
 #| echo: true
 
-datos_na |> 
+datos |> 
   summarise(
-    across(a:d, list(
+    across(Colesterol:Trigliceridos, list(
       media = \(x) mean(x, na.rm = TRUE),
-      n_na = \(x) sum(is.na(x))))
-  )
+      n_na = \(x) sum(is.na(x)))))
 ```
 
 La lista contiene cada función a aplicar, bajo nombres definidos.
@@ -369,13 +342,12 @@ Por ejemplo, podríamos invertir el orden predeterminado de los nombres del resu
 ```{r}
 #| echo: true
 
-datos_na |> 
+datos |> 
   summarise(
-    across(a:d, list(
+    across(Colesterol:Trigliceridos, list(
       media = \(x) mean(x, na.rm = TRUE),
       n_na = \(x) sum(is.na(x))),
-      .names = "{.fn}_{.col}")
-  )
+      .names = "{.fn}_{.col}"))
 ```
 
 ## Transformación de tipos de datos {.title-top}
@@ -392,15 +364,15 @@ Para lograr esto la función se vincula con `mutate()` modificando las variables
 
 <br>
 
-Aplicamos la función `coalesce()` para convertir los valores **NA** en ceros, transformando las variables originales.
+Aplicamos la función `log()` para calcular el logaritmo de los valores de las todas las variables.
 
 ```{r}
 #| echo: true
 
-datos_na |> 
+datos |> 
   mutate(
-    across(a:d, \(x) coalesce(x, 0))
-  )
+    across(Colesterol:Trigliceridos, log)) |> 
+  slice_head(n = 4) # vemos las primera 4 observaciones
 ```
 
 ## Transformación de tipos de datos {.title-top}
@@ -411,11 +383,11 @@ Hacemos lo mismo pero cambiamos los nombres de las variables de salida del `muta
 ```{r}
 #| echo: true
 
-datos_na |> 
+datos |> 
   mutate(
-    across(a:d, \(x) coalesce(x, 0),
-      .names = "{.col}_na_cero")
-  )
+    across(Colesterol:Trigliceridos, log,
+      .names = "{.col}_log")) |> 
+  slice_head(n = 4) # vemos las primera 4 observaciones
 ```
 
 ## Filtros {.title-top}
@@ -430,19 +402,30 @@ En el primer caso, la función enmascara una repetición de OR lógicos y en la 
 
 ## Filtros {.title-top}
 
+<br>
+
 ```{r}
 #| echo: true
 
-datos_na |> filter(if_any(a:d, is.na))
+datos |> 
+  filter(if_any(Colesterol:Trigliceridos, is.na))
 ```
+<br>
 
 Es lo mismo que `filter(is.na(a) | is.na(b) | is.na(c) | is.na(d))`
 
+## Filtros {.title-top}
+
+<br>
+
 ```{r}
 #| echo: true
 
-datos_na |> filter(if_all(a:d, is.na))
+datos |> 
+  filter(if_all(Colesterol:Trigliceridos, is.na))
 ```
+
+<br>
 
 Es lo mismo que `filter(is.na(a) & is.na(b) & is.na(c) & is.na(d))`
 
@@ -457,13 +440,9 @@ Las dos funciones de filtro trabajan con el mismo esquema que `across()`, por lo
 ```{r}
 #| echo: true
 
-datos  |> filter(if_all(a:d, \(x) x > -0.5 & x < 1))
+datos |> 
+  filter(if_all(Colesterol:Trigliceridos, \(x) x > 140 & x < 200))
 ```
-
-
-
-
-
 
 ## Paquete rstatix {.title-top}
 
@@ -580,7 +559,7 @@ Este paquete permite crear tablas de resumen elegantes y personalizables que des
 
 . . . 
 
-Estas tablas son esenciales para reportes, publicaciones y presentaciones, asegurando que la información clave sea fácilmente comprensible.
+Estas tablas son convenientes para reportes, publicaciones y presentaciones, asegurando que la información clave sea fácilmente comprensible.
 
 . . . 
 
@@ -593,7 +572,38 @@ Las salidas buscan producir estéticas compatibles con las tablas que se envían
 Un ejemplo de una tabla descriptiva con variables cuanti y cuali estratificada por Sexo.
 
 
-![](images/gtsummary.PNG){fig-align="center" width="1000"}
+![](images/gtsummary.PNG){fig-align="center" width="1400"}
+
+## gtsummary {.title-top}
+
+<br>
+
+Tiene 3 funciones principales
+
+- `tbl_summary()`:  Calcula estadísticas descriptivas para variables continuas, categóricas y dicotómicas.
+
+- `tbl_regression()`: Convierte un objeto de modelo de regresión en una tabla formateada y personalizada.
+
+- `tbl_survfit()`: Convierte un objeto survfit (supervivencia) en una tabla personalizada con estimaciones de tiempo hasta el evento.
+
+## gtsummary {.title-top}
+
+<br>
+
+En la función del ejemplo anterior `tbl_summary()`, se puede personalizar la salida con:
+
+::: incremental
+
+- Variable categórica de estratificación/agrupamiento
+- Etiqueta de variables
+- Estadísticos a mostrar en variables cuantitativas y cualitativas
+- Definir cantidad de digitos en redondeo
+- Valores ausentes: no tenerlos en cuenta o cambiarle la etiqueta 
+- Ordenamientos
+- Agregar valores p de test estadísticos entre grupos
+- etc.
+
+:::
 
 ## flextable {.title-top}
 
@@ -645,8 +655,32 @@ Con flextable podemos configurar esa misma tabla, para mejorar su presentación:
 #| echo: true
 #| message: false
 #| warning: false
+#| eval: false
 
 library(flextable)
+
+datos |> 
+  freq_table(Sexo) |> 
+  flextable() |> # convertir a flextable
+  fontsize(size = 30, part = "all") |>  # modificar tamaño de fuente
+  align(align = "center", part = "all") |>  # alinear textos
+  line_spacing(space = 2, part = "all") |> # espacios en filas y columnas
+  padding(padding = 6, part = "header") |> # espacio en titulo
+  set_header_labels(n = "Frecuencia", prop = "%") |> # cambiar cabecera
+  theme_zebra() # agregar tema tipo zebra
+```
+
+## flextable {.title-top}
+
+<br>
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(flextable)
+
 datos |> freq_table(Sexo) |> 
   flextable() |> 
   fontsize(size = 30, part = "all") |> 
@@ -656,4 +690,3 @@ datos |> freq_table(Sexo) |>
   set_header_labels(n = "Frecuencia", prop = "%") |> 
   theme_zebra()
 ```
-
