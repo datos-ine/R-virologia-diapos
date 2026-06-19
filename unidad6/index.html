@@ -1062,7 +1062,7 @@ margin-right: 0; }
 <div class="{.columns&quot;}">
 <div class="column" style="width:70%;">
 <p>La <strong>estadística inferencial</strong> es la rama que permite formular conclusiones sobre una población a partir del análisis de una muestra.</p>
-<p>Se apoya en dos actividades principales:</p>
+<p>Existen dos actividades principales:</p>
 <ol type="1">
 <li class="fragment"><strong>Estimación de parámetros</strong>: Calcular valores aproximados de parámetros poblacionales desconocidos (ej. prevalencia de una enfermedad).</li>
 <li class="fragment"><strong>Pruebas de hipótesis</strong>: Evaluar afirmaciones sobre uno o más parámetros basándose en evidencia estadística (habitualmente comparaciones).</li>
@@ -1103,11 +1103,20 @@ margin-right: 0; }
 </ul>
 <div class="fragment">
 <p>La <strong>distribución muestral</strong> permite cuantificar la incertidumbre asociada a estas estimaciones.</p>
-<p>Cada tipo diferente de variable posee, según su naturaleza, una distribución muestral probabilística que la caracteriza (Normal, Poisson, binomial, etc).</p>
+<p>Cada tipo diferente de estadístico posee, según su naturaleza, una distribución muestral probabilística teórica que la caracteriza (Normal, Poisson, binomial, etc).</p>
 </div>
 </section>
-<section id="contexto-relevante" class="slide level2 title-top">
-<h2>Contexto relevante</h2>
+<section id="estadístico-variable-aleatoria" class="slide level2 title-top">
+<h2>Estadístico = variable aleatoria</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><p>El estadístico es una función de los datos de la muestra.</p></li>
+<li class="fragment"><p>Como los datos (<span class="math inline">\(X_1, X_2, ..., X_n\)</span>) son variables aleatorias (pues no se sabe qué valores vamos a tener hasta que no conozcamos la muestra), cualquier función de variables aleatorias también es una variable aleatoria.</p></li>
+<li class="fragment"><p>Por lo tanto, antes de tomar la muestra, el estadístico tiene una distribución de probabilidad teórica y puede tomar infinitos valores posibles con distintas probabilidades.</p></li>
+</ul>
+</section>
+<section id="definiciones" class="slide level2 title-top">
+<h2>Definiciones</h2>
 <p><br></p>
 <div class="fragment fade-in-then-semi-out">
 <p><strong>Distribución muestral</strong> La distribución muestral de un estadístico es la distribución de todos los valores posibles que ese estadístico puede tomar al calcularse en muestras aleatorias del mismo tamaño extraídas de una misma población. Este concepto es central en la inferencia estadística, ya que permite cuantificar la incertidumbre asociada a las estimaciones.</p>
@@ -1145,7 +1154,7 @@ margin-right: 0; }
 <li class="fragment"><p>Si se toman muestras aleatorias de tamaño <span class="math inline">\(n\)</span> de cualquier población (incluso no Normal), la distribución de las <strong>medias muestrales</strong> tenderá a seguir una distribución Normal a medida que <span class="math inline">\(n\)</span> aumenta.</p></li>
 <li class="fragment"><p>Plantea que la media de los promedios es igual a la media de la población.</p></li>
 <li class="fragment"><p>Y que la variabilidad de los promedios (denominada error estándar) disminuye al aumentar el tamaño de la muestra <span class="math inline">\(EE = \frac{\sigma}{\sqrt{n}}\)</span></p></li>
-<li class="fragment"><p>Es el “puente” que justifica el uso de tests paramétricos (como el t-test o ANOVA) y el cálculo de intervalos de confianza en poblaciones que no siguen exactamente una campana de Gauss</p></li>
+<li class="fragment"><p>Es el “puente” que justifica el uso de tests paramétricos (como el t-test o ANOVA) y el cálculo de intervalos de confianza en muestras que no siguen exactamente una campana de Gauss (en n grandes y con distribuciones no sesgadas)</p></li>
 </ul>
 </section>
 <section id="intervalos-de-confianza-ic" class="slide level2 title-top">
@@ -1212,7 +1221,7 @@ margin-right: 0; }
 </div>
 </div>
 </section>
-<section id="pruebas-de-hipótesis" class="slide level2 title-top smaller">
+<section id="pruebas-de-hipótesis" class="slide level2 title-top">
 <h2>Pruebas de hipótesis</h2>
 <p><br></p>
 <p>La prueba de hipótesis es la herramienta que nos permite decidir si lo que vemos en la muestra es lo suficientemente fuerte como para creer que también ocurre en la población. Suele plantearse como una comparación de dos o más grupos y posee una estructura que consta de:</p>
@@ -1226,6 +1235,10 @@ margin-right: 0; }
 <li>Hipótesis alternativa (<span class="math inline">\(H_1\)</span>) : Es la conjetura o suposición que plantea el investigador, estableciendo que sí existe una diferencia entre los grupos. Generalmente es complementaria de la <span class="math inline">\(H_0\)</span></li>
 </ul>
 </div>
+</section>
+<section id="pruebas-de-hipótesis-1" class="slide level2 title-top">
+<h2>Pruebas de hipótesis</h2>
+<p><br></p>
 <div class="fragment fade-in-then-semi-out">
 <ul>
 <li>Estadístico de prueba: Es el valor calculado a partir de los datos muestrales que se utiliza para tomar la decisión sobre la <span class="math inline">\(H_0\)</span>.</li>
@@ -1250,7 +1263,7 @@ margin-right: 0; }
 <p><br></p>
 <ul>
 <li><p><strong>Tests paramétricos</strong>: Asumen que los datos provienen de una población con una distribución específica y se centran en estimar parámetros. Son más “potentes” pero requieren que se cumplan ciertos supuestos. Son sensibles a los datos atípicos.</p></li>
-<li><p><strong>Tests no paramétricos</strong>: No asumen una distribución previa (“distribución libre”). Suelen trabajar con el orden o rangos de los datos en lugar de sus valores exactos. Tienen menor potencia estadística pero no necesitan de cumplimniento de supuestos. Son robustos a datos atípicos.</p></li>
+<li><p><strong>Tests no paramétricos</strong>: No asumen una distribución previa (“distribución libre”). Suelen trabajar con el orden o rangos de los datos en lugar de sus valores exactos. Tienen menor potencia estadística pero no necesitan de cumplimniento de supuestos. Son robustos a datos atípicos. Incluyen a métodos computacionales como el bootstrap.</p></li>
 </ul>
 </section>
 <section id="supuestos-normalidad-y-homocedasticidad" class="slide level2 title-top">
@@ -1349,8 +1362,99 @@ margin-right: 0; }
 </div>
 </div>
 </section>
-<section id="inferencia-de-datos-categóricos" class="slide level2 title-top">
-<h2>Inferencia de datos categóricos</h2>
+<section id="pruebas-paramétricas-para-datos-cuantitativos" class="slide level2 title-top">
+<h2>Pruebas paramétricas para datos cuantitativos</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Prueba</th>
+<th>¿Para qué sirve?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>t de Student (una muestra)</td>
+<td>Comparar la media observada con un valor de referencia.</td>
+</tr>
+<tr class="even">
+<td>t de Student (muestras independientes)</td>
+<td>Comparar medias entre dos grupos independientes.</td>
+</tr>
+<tr class="odd">
+<td>t de Student pareada</td>
+<td>Comparar medias antes-después o en observaciones emparejadas.</td>
+</tr>
+<tr class="even">
+<td>ANOVA</td>
+<td>Comparar medias entre tres o más grupos independientes.</td>
+</tr>
+<tr class="odd">
+<td>ANOVA de medidas repetidas</td>
+<td>Comparar medias en tres o más mediciones de los mismos sujetos.</td>
+</tr>
+<tr class="even">
+<td>Correlación de Pearson</td>
+<td>Medir asociación lineal entre dos variables cuantitativas.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pruebas-no-paramétricas-para-datos-cuantitativos" class="slide level2 title-top">
+<h2>Pruebas no paramétricas para datos cuantitativos</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 29%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Prueba</th>
+<th>Equivalente paramétrico</th>
+<th>¿Para qué sirve?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Wilcoxon signed-rank</td>
+<td>t pareada</td>
+<td>Comparar dos mediciones relacionadas.</td>
+</tr>
+<tr class="even">
+<td>Mann-Whitney U</td>
+<td>t independiente</td>
+<td>Comparar dos grupos independientes.</td>
+</tr>
+<tr class="odd">
+<td>Kruskal-Wallis</td>
+<td>ANOVA</td>
+<td>Comparar tres o más grupos independientes.</td>
+</tr>
+<tr class="even">
+<td>Friedman</td>
+<td>ANOVA de medidas repetidas</td>
+<td>Comparar tres o más mediciones relacionadas.</td>
+</tr>
+<tr class="odd">
+<td>Spearman</td>
+<td>Pearson</td>
+<td>Medir asociación monotónica entre variables.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pruebas-para-datos-categóricos" class="slide level2 title-top">
+<h2>Pruebas para datos categóricos</h2>
+<p><br></p>
+<p><strong>Prueba de <span class="math inline">\(X^2\)</span> (Chi-cuadrado):</strong> Para independencia y bondad de ajuste</p>
+<p><strong>Prueba Exacta de Fisher:</strong> Asociación en tablas de contingencia con frecuencias esperadas bajas.</p>
+<p><strong>Prueba de McNemar:</strong> Comparación de proporciones en muestras apareadas.</p>
+<p><strong>Prueba binomial exacta:</strong> Contraste de una proporción observada frente a una proporción esperada.</p>
+<p><strong>Prueba de tendencia de Cochran-Armitage:</strong> Evaluación de tendencias en variables categóricas ordinales.</p>
 </section>
 <section id="el-balance-de-la-inferencia-estadística" class="slide level2 title-top">
 <h2>El balance de la inferencia estadística</h2>
@@ -1376,6 +1480,52 @@ margin-right: 0; }
 </div>
 </div>
 </div></div>
+</section>
+<section id="el-balance-de-la-inferencia-estadística-1" class="slide level2 title-top">
+<h2>El balance de la inferencia estadística</h2>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 11%">
+<col style="width: 34%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Si aumenta…</th>
+<th>Potencia</th>
+<th>Tamaño de muestra necesario</th>
+<th>α (Error Tipo I)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tamaño de efecto</td>
+<td>↑</td>
+<td>↓</td>
+<td>=</td>
+</tr>
+<tr class="even">
+<td>Tamaño de muestra</td>
+<td>↑</td>
+<td>-</td>
+<td>=</td>
+</tr>
+<tr class="odd">
+<td>Nivel de significación (α)</td>
+<td>↑</td>
+<td>↓</td>
+<td>↑</td>
+</tr>
+<tr class="even">
+<td>Potencia deseada</td>
+<td>-</td>
+<td>↑</td>
+<td>=</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="funciones-de-rstatix" class="slide level2 title-top">
 <h2>Funciones de <code>rstatix</code></h2>

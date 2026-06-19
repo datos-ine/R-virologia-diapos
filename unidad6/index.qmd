@@ -99,7 +99,17 @@ Cada tipo diferente de estadístico posee, según su naturaleza, una distribuci�
 
 ##  Estadístico = variable aleatoria {.title-top}
 
+<br>
 
+::: incremental
+
+- El estadístico es una función de los datos de la muestra.
+
+- Como los datos ($X_1, X_2, ..., X_n$) son variables aleatorias (pues no se sabe qué valores vamos a tener hasta que no conozcamos la muestra), cualquier función de variables aleatorias también es una variable aleatoria.
+
+- Por lo tanto, antes de tomar la muestra, el estadístico tiene una distribución de probabilidad teórica y puede tomar infinitos valores posibles con distintas probabilidades.
+
+:::
 
 ## Definiciones {.title-top}
 
@@ -162,7 +172,7 @@ knitr::include_graphics("images/Normal.png")
 
 - Y que la variabilidad de los promedios (denominada error estándar) disminuye al aumentar el tamaño de la muestra $EE = \frac{\sigma}{\sqrt{n}}$
 
-- Es el "puente" que justifica el uso de tests paramétricos (como el t-test o ANOVA) y el cálculo de intervalos de confianza en poblaciones que no siguen exactamente una campana de Gauss
+- Es el "puente" que justifica el uso de tests paramétricos (como el t-test o ANOVA) y el cálculo de intervalos de confianza en muestras que no siguen exactamente una campana de Gauss (en n grandes y con distribuciones no sesgadas)
 
 :::
 
@@ -232,7 +242,7 @@ base |>
 knitr::include_graphics("images/resultado_IC.JPG")
 ```
 
-## Pruebas de hipótesis {.title-top .smaller}
+## Pruebas de hipótesis {.title-top}
 
 <br>
 
@@ -249,6 +259,10 @@ La prueba de hipótesis es la herramienta que nos permite decidir si lo que vemo
 - Hipótesis alternativa ($H_1$) : Es la conjetura o suposición que plantea el investigador, estableciendo que sí existe una diferencia entre los grupos. Generalmente es complementaria de la $H_0$
 
 :::
+
+## Pruebas de hipótesis {.title-top}
+
+<br>
 
 ::: {.fragment .fade-in-then-semi-out}
 
@@ -280,7 +294,7 @@ La prueba de hipótesis es la herramienta que nos permite decidir si lo que vemo
 
 - **Tests paramétricos**: Asumen que los datos provienen de una población con una distribución específica y se centran en estimar parámetros. Son más "potentes" pero requieren que se cumplan ciertos supuestos. Son sensibles a los datos atípicos.
 
-- **Tests no paramétricos**: No asumen una distribución previa ("distribución libre"). Suelen trabajar con el orden o rangos de los datos en lugar de sus valores exactos. Tienen menor potencia estadística pero no necesitan de cumplimniento de supuestos. Son robustos a datos atípicos.
+- **Tests no paramétricos**: No asumen una distribución previa ("distribución libre"). Suelen trabajar con el orden o rangos de los datos en lugar de sus valores exactos. Tienen menor potencia estadística pero no necesitan de cumplimniento de supuestos. Son robustos a datos atípicos. Incluyen a métodos computacionales como el bootstrap.
 
 ## Supuestos: Normalidad y homocedasticidad {.title-top}
 
@@ -391,13 +405,41 @@ Preguntas que debo responder:
 knitr::include_graphics("images/flujo_var_cuanti.JPG")
 ```
 
-## Inferencia de datos categóricos  {.title-top}
+## Pruebas paramétricas para datos cuantitativos  {.title-top}
 
-Prueba de $X^2$ (Chi-cuadrado): Para independencia y bondad de ajuste
+| Prueba                                 | ¿Para qué sirve?                                                |
+|----------------------------------------|-----------------------------------------------------------------|
+| t de Student (una muestra)             | Comparar la media observada con un valor de referencia.         |
+| t de Student (muestras independientes) | Comparar medias entre dos grupos independientes.                |
+| t de Student pareada                   | Comparar medias antes-después o en observaciones emparejadas.   |
+| ANOVA                                  | Comparar medias entre tres o más grupos independientes.         |
+| ANOVA de medidas repetidas             | Comparar medias en tres o más mediciones de los mismos sujetos. |
+| Correlación de Pearson                 | Medir asociación lineal entre dos variables cuantitativas.      |
 
-Prueba Exacta de Fisher: Crucial cuando los tamaños de muestra son pequeños en tablas de contingencia
 
+## Pruebas no paramétricas para datos cuantitativos  {.title-top}
 
+| Prueba               | Equivalente paramétrico    | ¿Para qué sirve?                             |
+|----------------------|----------------------------|----------------------------------------------|
+| Wilcoxon signed-rank | t pareada                  | Comparar dos mediciones relacionadas.        |
+| Mann-Whitney U       | t independiente            | Comparar dos grupos independientes.          |
+| Kruskal-Wallis       | ANOVA                      | Comparar tres o más grupos independientes.   |
+| Friedman             | ANOVA de medidas repetidas | Comparar tres o más mediciones relacionadas. |
+| Spearman             | Pearson                    | Medir asociación monotónica entre variables. |
+
+## Pruebas para datos categóricos  {.title-top}
+
+<br>
+
+**Prueba de $X^2$ (Chi-cuadrado):** Para independencia y bondad de ajuste
+
+**Prueba Exacta de Fisher:** Asociación en tablas de contingencia con frecuencias esperadas bajas.
+
+**Prueba de McNemar:** Comparación de proporciones en muestras apareadas.
+
+**Prueba binomial exacta:** Contraste de una proporción observada frente a una proporción esperada.
+
+**Prueba de tendencia de Cochran-Armitage:** Evaluación de tendencias en variables categóricas ordinales.
 
 ## El balance de la inferencia estadística {.title-top}
 
@@ -431,6 +473,19 @@ knitr::include_graphics("images/curva_potencia.JPG")
 :::
 
 ::::
+
+
+## El balance de la inferencia estadística {.title-top}
+
+<br>
+
+| Si aumenta...              | Potencia | Tamaño de muestra necesario | α (Error Tipo I) |
+|----------------------------|----------|-----------------------------|------------------|
+| Tamaño de efecto           | ↑        | ↓                           | =                |
+| Tamaño de muestra          | ↑        | -                           | =                |
+| Nivel de significación (α) | ↑        | ↓                           | ↑                |
+| Potencia deseada           | -        | ↑                           | =                |
+
 
 ## Funciones de `rstatix` {.title-top}
 
