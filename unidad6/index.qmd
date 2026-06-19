@@ -43,7 +43,7 @@ library(tidyverse)
 
 La **estadística inferencial** es la rama que permite formular conclusiones sobre una población a partir del análisis de una muestra. 
 
-Se apoya en dos actividades principales:
+Existen dos actividades principales:
 
 1.  **Estimación de parámetros**: Calcular valores aproximados de parámetros poblacionales desconocidos (ej. prevalencia de una enfermedad).
 2.  **Pruebas de hipótesis**: Evaluar afirmaciones sobre uno o más parámetros basándose en evidencia estadística (habitualmente comparaciones).
@@ -95,10 +95,13 @@ Es fundamental distinguir entre la población y la muestra:
 
 La **distribución muestral** permite cuantificar la incertidumbre asociada a estas estimaciones. 
 
-Cada tipo diferente de variable posee, según su naturaleza, una distribución muestral probabilística que la caracteriza (Normal, Poisson, binomial, etc).
+Cada tipo diferente de estadístico posee, según su naturaleza, una distribución muestral probabilística teórica que la caracteriza (Normal, Poisson, binomial, etc).
+
+##  Estadístico = variable aleatoria {.title-top}
 
 
-## Contexto relevante{.title-top}
+
+## Definiciones {.title-top}
 
 <br>
 
