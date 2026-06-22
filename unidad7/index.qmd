@@ -286,7 +286,7 @@ libro casa - ver grafico de tortas
 
 ## Temas {.title-top}
 
-libro casa
+
 
 ## Estructura de gráficos pensados para comunicar {.title-top}
 
@@ -425,3 +425,7 @@ ggsave(filename,               # nombre del archivo
   units = c("in", "cm", "mm"), # unidades de medidas
   dpi = 300)                   # resolución de salida en dpi
 ```
+
+## Paquete patchwork {.title-top}
+
+## Extensiones del ggplot2 {.title-top}
