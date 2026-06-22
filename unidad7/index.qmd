@@ -130,7 +130,7 @@ El paquete propone un sistema que se basa en la idea que cualquier gráfico se p
 
 - Estas capas se unen con el signo **+** (es similar a las tuberías vistas)
 
-- Hay muchos tipos de gráficos y cada uno tiene muchas opciones/detalles. Aunque slgunas tareas son extremadamente comunes para todos.
+- Hay muchos tipos de gráficos y cada uno tiene muchas opciones/detalles. Aunque algunas tareas son extremadamente comunes para todos.
 
 ## Las geometrias definen el tipo de gráfico {.title-top}
 
@@ -189,42 +189,239 @@ Las capas posteriores son opcionales. Algunas de ellas son:
 
 ## Ejemplo de gráficos objetivos {.title-top}
 
+<br>
 
+![](images/histograma.PNG){width="60%" fig-align="center"}
+
+## Ejemplo de gráficos objetivos {.title-top}
+
+<br>
+
+![](images/boxplot.PNG){width="40%" fig-align="center"}
+
+![](images/anatomia_boxplot.PNG){width="30%" fig-align="center"}
+
+## Ejemplo de gráficos objetivos {.title-top}
+
+<br>
+
+![](images/dispersion.PNG){width="65%" fig-align="center"}
+
+## Ejemplo de gráficos objetivos {.title-top}
+
+<br>
+
+![](images/lineas.PNG){width="70%" fig-align="center"}
 
 ## Mapeos globales y locales {.title-top}
 
+Si los mapeos se determinan dentro del `aes()` incluido en el `ggplot()` principal, son llamados **globales** y rigen para todos los elementos geométricos del gráfico.
+
+Si los mapeos se definen solo dentro del `aes()` de una geometría, solo rigen exclusivamente en ese elemento del gráfico.
+
+:::: columns
+::: {.column width="50%"}
+
+![](images/global.PNG){width="60%" fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+
+![](images/local.PNG){width="60%" fig-align="center"}
+
+:::
+::::
 
 ## Estéticas más usadas {.title-top}
 
+libro casa
 
-## Geometrías clásica {.title-top}
 
+## Geometrías clásicas {.title-top}
 
+libro casa
 
 ## Colores  {.title-top}
 
 <br>
-
-Se pueden especificar colores de varias formas (mostramos los tres mas comunes):
+Se puede usar colores bajo el argumento **color** para geometrías de puntos, líneas y contornos y **fill** para rellenos de polígonos.
+Existen varias formas de especificarlos (mostramos los tres mas comunes):
 
 ::: incremental
 
-- **Nombre:** el lenguaje tiene 657 colores con nombres. Estos van encerrados entre comillas y RStudio los detecta mostrando una previsualización del color elegido. (ej: "maroon") 
-"powderblue"
+- **Nombre:** el lenguaje tiene 657 colores con nombres bajo la función `colors()`. Estos van encerrados entre comillas y RStudio los detecta mostrando una previsualización del color elegido. (ej: "maroon") 
 
-- **Código hexadecimal:** "códigos" para la cantidad de luz roja, verde y azul. (ej: "#B0E0E6")
+- **Código hexadecimal:** "códigos" para la cantidad de luz roja, verde y azul. (ej: "#B0E0E6"). Paleta de 16.777.216 colores posibles.
 
-- **RGB:** clasica mezcla de luces roja, verde y azul. (ej: rgb(176, 224, 230, maxColorValue = 255))
+- **RGB:** clásica mezcla de luces roja, verde y azul. (ej: rgb(176, 224, 230, maxColorValue = 255))
 
 :::
 
+## Formas (shapes)  {.title-top}
 
-## Escalas {.title-top}
+<br>
 
+En el caso del elemento geométrico **punto** hay disponibles una serie de formas (**shape**) bajo estos código numéricos.
 
+![](images/shapes.PNG){width="45%" fig-align="center"}
+
+## Tamaño y transparencia {.title-top}
+
+<br>
+
+Otras dos propiedades visuales son el tamaño (**size** o **linewidth**) y la transparencia u opacidad (según desde donde se lo mire) llamada **alpha**. 
+
+Esta propiedad tiene valores de 0 a 1, 0 es todo transparente (no se visualiza) y 1 es todo opaco (no tiene transparencia)
+
+![](images/alpha.PNG){width="35%" fig-align="center"}
 
 ## Facetas {.title-top}
 
+libro casa
+
 ## Coordenadas {.title-top}
 
+libro casa - ver grafico de tortas
+
 ## Temas {.title-top}
+
+libro casa
+
+## Estructura de gráficos pensados para comunicar {.title-top}
+
+<br>
+
+**Título** (obligatorio)
+
+Debe responder, en la medida de lo posible a tiempo + lugar + persona:
+
+- ¿Qué variable se muestra?
+- ¿En quiénes?
+- ¿Dónde?
+- ¿Cuándo?
+
+Ejemplos:
+
+*Incidencia de dengue por provincia. Argentina, 2025.*
+
+*Distribución de edades de pacientes internados por COVID-19. Hospital X, marzo-junio de 2021.*
+
+## Estructura de gráficos pensados para comunicar {.title-top}
+
+<br>
+
+**Ejes correctamente identificados** (obligatorio)
+
+Los ejes deben indicar:
+
+- Variable
+- Unidad de medida (escala)
+
+Ejemplos:
+
+Eje Y: *Tasa de incidencia (por 100.000 habitantes)*
+
+Eje X: *Semana epidemiológica*
+
+Las escalas deben tener intervalos regulares, origen en cero cuando corresponda y
+evitar escalas truncadas que exageren diferencias.
+
+## Estructura de gráficos pensados para comunicar {.title-top}
+
+<br>
+
+**Leyenda ** (si es necesaria)
+
+Cuando existen:
+
+- múltiples grupos,
+- colores,
+- símbolos,
+- líneas.
+
+No es necesaria si los grupos pueden etiquetarse directamente.
+
+## Estructura de gráficos pensados para comunicar {.title-top}
+
+**Subtítulo** (recomendable)
+
+Permite agregar detalles metodológicos.
+
+Ejemplo: *Casos confirmados por laboratorio notificados al SNVS 2.0.*
+
+**Pie de gráfico** (recomendable)
+
+Contiene información que no conviene poner en el título.
+
+Puede incluir:
+
+- Fuente de datos.
+- Definiciones operativas.
+- Aclaraciones metodológicas.
+- Abreviaturas.
+
+Ejemplo: *Fuente: Sistema Nacional de Vigilancia de la Salud (SNVS 2.0). Datos preliminares al 15/05/2026.*
+
+## Estructura de gráficos pensados para comunicar {.title-top}
+
+<br>
+
+**Tamaño muestral (n)** (obligatorio en algunos casos)
+
+Especialmente importante en: histogramas, boxplots, comparaciones de grupos, gráficos de encuestas.
+
+Ejemplo: *n = 235 pacientes.*
+
+<br>
+
+**Fecha de actualización** (recomendable)
+
+Muy útil en vigilancia epidemiológica.
+
+Ejemplo: *Actualizado al 20/06/2026.*
+
+## Estructura de gráficos pensados para comunicar {.title-top}
+
+<br>
+
+**Elementos opcionales según el objetivo**
+
+**Intervalos de confianza**: Cuando se comunican estimaciones.
+
+Ejemplos: *prevalencias, incidencias, odds ratios, medias poblacionales.*
+
+**Valores exactos**: Sobre barras o puntos.
+
+Útil cuando: *hay pocas categorías, interesa la precisión.**
+
+**Anotaciones o llamados de atención**: Para resaltar eventos importantes.
+
+Ejemplo: *Inicio de campaña de vacunación*.
+
+**Líneas de referencia**: Muy utilizadas en vigilancia:
+
+Ejemplo: *promedio histórico, percentil 90, umbral epidémico, meta programática.*
+
+**Otros**: Logotipos institucionales (en contextos formales).
+
+
+## Exportar gráficos de ggplot2 {.title-top}
+
+<br>
+
+- Desde el **_panel Plot_** de **RStudio**
+
+- En formatos conocidos como JPG, PNG, PDF, etc
+
+- Mayor control con la función `ggsave()`
+
+```{r, eval=FALSE, echo=T}
+ggsave(filename,               # nombre del archivo
+  plot = last_plot(),          # nombre del objeto gráfico
+  device = NULL,               # formato de salida "jpeg", "png", "tiff", "pdf", etc
+  width = NA,                  # ancho en unidades de units
+  height = NA,                 # alto en unidades de units
+  units = c("in", "cm", "mm"), # unidades de medidas
+  dpi = 300)                   # resolución de salida en dpi
+```
