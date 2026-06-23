@@ -235,16 +235,20 @@ Si los mapeos se definen solo dentro del `aes()` de una geometría, solo rigen e
 
 ## Estéticas más usadas {.title-top}
 
-libro casa
+
+![](images/esteticas_comunes.PNG){width="80%" fig-align="center"}
 
 
 ## Geometrías clásicas {.title-top}
 
-libro casa
+<br>
+
+![](images/geometrias_comunes.PNG){width="80%" fig-align="center"}
 
 ## Colores  {.title-top}
 
 <br>
+
 Se puede usar colores bajo el argumento **color** para geometrías de puntos, líneas y contornos y **fill** para rellenos de polígonos.
 Existen varias formas de especificarlos (mostramos los tres mas comunes):
 
@@ -264,7 +268,9 @@ Existen varias formas de especificarlos (mostramos los tres mas comunes):
 
 En el caso del elemento geométrico **punto** hay disponibles una serie de formas (**shape**) bajo estos código numéricos.
 
-![](images/shapes.PNG){width="45%" fig-align="center"}
+<br>
+
+![](images/shapes.PNG){width="60%" fig-align="center"}
 
 ## Tamaño y transparencia {.title-top}
 
@@ -274,19 +280,69 @@ Otras dos propiedades visuales son el tamaño (**size** o **linewidth**) y la tr
 
 Esta propiedad tiene valores de 0 a 1, 0 es todo transparente (no se visualiza) y 1 es todo opaco (no tiene transparencia)
 
-![](images/alpha.PNG){width="35%" fig-align="center"}
+![](images/alpha.PNG){width="30%" fig-align="center"}
 
 ## Facetas {.title-top}
 
-libro casa
+<br>
+
+Las facetas son una técnica de visualización que divide un conjunto de datos en subconjuntos y representa cada uno en un panel independiente. 
+
+Las funciones posibles son `facet_wrap()` (secuencia unidimensional) y `facet_grid()` (matriz bidimensional).
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+
+![](images/faceta_horizontal.PNG){width="90%" fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+
+![](images/faceta_vertical.PNG){width="90%" fig-align="center"}
+
+:::
+:::::
+
 
 ## Coordenadas {.title-top}
 
-libro casa - ver grafico de tortas
+<br>
+
+Las coordenadas definen el sistema de representación del gráfico. `coord_polar()` permite pasar de coordenadas cartesianas a polares para crear gráficos de sectores.
+
+::::: columns
+::: {.column width="50%"}
+
+<br>
+
+![](images/coord_polar1.PNG){width="90%" fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+
+![](images/coord_polar2.PNG){width="80%" fig-align="center"}
+
+:::
+:::::
 
 ## Temas {.title-top}
 
+Los temas con la función `theme()`, permiten personalizar la apariencia no relacionada con los datos, modificando elementos como títulos, ejes, leyendas, fuentes, colores y márgenes del gráfico. (apariencia estética)
 
+**ggplot2** incluye temas predefinidos como:
+
+| Tema | Característica |
+|---|---|
+| `theme_gray()` | Tema predeterminado de ggplot2. |
+| `theme_bw()` | Fondo blanco, útil para publicaciones. |
+| `theme_minimal()` | Diseño limpio con pocos elementos visuales. |
+| `theme_classic()` | Similar a gráficos tradicionales, sin cuadrícula. |
+| `theme_light()` | Cuadrícula suave y aspecto moderno. |
+| `theme_void()` | Elimina todos los elementos del gráfico. |
 
 ## Estructura de gráficos pensados para comunicar {.title-top}
 
