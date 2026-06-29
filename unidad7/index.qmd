@@ -484,4 +484,64 @@ ggsave(filename,               # nombre del archivo
 
 ## Paquete patchwork {.title-top}
 
+**Patchwork** es un paquete diseñado para combinar múltiples gráficos de **ggplot2** de forma simple y declarativa. 
+
+Permite organizar gráficos en filas, columnas o diseños más complejos utilizando operadores matemáticos.
+
+Es especialmente útil para crear paneles comparativos, figuras para publicaciones científicas y tableros de visualización.
+
+![](images/patchwork.PNG){width="50%" fig-align="center"}
+
+## Paquete patchwork {.title-top}
+
+<br>
+
+**Operadores principales**
+
+`+` : combina gráficos.
+
+`|` : organiza gráficos en una fila.
+
+`/` : organiza gráficos en una columna.
+
+`plot_layout()` : controla el número de filas, columnas y proporciones.
+
+`plot_annotation()` : agrega títulos, subtítulos y notas al conjunto de gráficos.
+
+<br>
+
+```{r, echo = T, eval=F}
+
+(g1 | g2) +
+  plot_annotation(
+    title = "Ttiulo del grafico compuesto",
+    subtitle = "Subtitlo"
+  )
+
+```
+
+<https://patchwork.data-imaginist.com/index.html>
+
 ## Extensiones del ggplot2 {.title-top}
+
+<br>
+
+**ggplot2** cuenta con un amplio ecosistema de paquetes complementarios que amplían sus capacidades de visualización. 
+
+Estas extensiones permiten incorporar nuevos tipos de gráficos, etiquetas avanzadas, escalas de colores, composiciones multipanel, animaciones e interactividad, manteniendo la misma filosofía basada en capas (*Grammar of Graphics*).
+
+<br>
+
+Algunas extensiones populares:
+
+**ggrepel**: mejora la ubicación de etiquetas evitando superposiciones.
+
+**ggthemes**: incorpora temas y estilos predefinidos.
+
+**ggforce**: agrega nuevas geometrías y funcionalidades avanzadas.
+
+**ggridges**: crea gráficos de densidad superpuestos (ridgeline plots).
+
+**plotly**: transforma gráficos estáticos en visualizaciones interactivas.
+
+**gganimate**: genera animaciones a partir de gráficos de ggplot2.
