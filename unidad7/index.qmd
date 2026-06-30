@@ -530,8 +530,6 @@ Es especialmente útil para crear paneles comparativos, figuras para publicacion
 
 Estas extensiones permiten incorporar nuevos tipos de gráficos, etiquetas avanzadas, escalas de colores, composiciones multipanel, animaciones e interactividad, manteniendo la misma filosofía basada en capas (*Grammar of Graphics*).
 
-<br>
-
 Algunas extensiones populares:
 
 **ggrepel**: mejora la ubicación de etiquetas evitando superposiciones.
