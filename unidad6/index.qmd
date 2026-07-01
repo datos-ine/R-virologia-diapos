@@ -501,6 +501,39 @@ Algunos de sus argumentos transversales son:
 - `var.equal`: si las varianzas son iguales en los grupos es TRUE
 - `alternative`: especifica el tipo de hipótesis alternativa ("two.sided", "greater" o "less")
 
+## Sintaxis formula {.title-top}
+
+<br>
+
+La sintaxis `desenlance ~ explicativa` expresa la relación entre variables y es utilizada por la mayoría de las funciones de inferencia y modelado en R, incluyendo funciones de **rstatix**.
+
+```{r, eval=F}
+carga_viral ~ sexo     # Comparación de carga viral según categorias de sexo
+```
+
+<br>
+
+**Ventajas**
+
+- Sintaxis uniforme en numerosos paquetes y funciones.
+- Separa claramente la variable respuesta de las variables explicativas.
+- Facilita el ajuste de modelos simples y complejos.
+
+## Sintaxis formula {.title-top}
+
+<br>
+
+| Operador | Significado                                                               | Ejemplo                |
+|----------|---------------------------------------------------------------------------|------------------------|
+| +        | Agrega variables explicativas al modelo.                                  | y ~ edad + sexo        |
+| :        | Incluye únicamente la interacción entre variables.                        | y ~ sexo:tratamiento   |
+| *        | Incluye los efectos principales y su interacción (A + B + A:B).           | y ~ sexo * tratamiento |
+| -        | Elimina un término del modelo.                                            | y ~ edad + sexo - edad |
+| .        | Incluye todas las variables del conjunto de datos (excepto la respuesta). | y ~ .                  |
+
+
+
+
 ## ANOVA {.title-top}
 
 :::: {.columns"}
@@ -547,7 +580,7 @@ En el *análisis de varianza*, la variabilidad total se descompone en dos compon
 ```{r}
 #| echo: false
 #| fig-align: center
-#| out-width: 80%
+#| out-width: 90%
 knitr::include_graphics("images/anova2.JPG")
 ```
 
