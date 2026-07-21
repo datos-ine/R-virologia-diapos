@@ -146,7 +146,7 @@ Celsius = \${d3.format(".0f")(temp)}℃ y Fahrenheit = \${d3.format(".1f")(temp 
 cballejo$ quarto --help
 
   Usage:   quarto
-  Version: 1.9.37
+  Version: 1.9.38
 
   Description:
     Quarto CLI
@@ -175,7 +175,7 @@ cballejo$ quarto --help
 
 -   El sitio web de `Quarto` es <https://quarto.org/>
 
--   La **versión actual** es 1.9.37 (Windows) del 09/04/2026
+-   La **versión actual** es 1.9.38 (Windows) del 25/05/2026
 
 -   La **guía oficial** se puede encontrar en <https://quarto.org/docs/guide/>
 
@@ -1466,48 +1466,6 @@ La mayoría de las *opciones de ejecución* vistas para HTML sirven para este ti
 
 Quarto utiliza clases de documentos [KOMA Script](https://ctan.org/pkg/koma-script) de forma predeterminada para libros y documentos PDF.
 
-## Clases de documentos {.title-top}
-
-<br>
-
-La opción de ejecución `documentclass:` posibilita cambiar de clase utilizando la configuración KOMA Script.
-
-| Opción   | Descripción                                                                                         |
-|------------------------------------|------------------------------------|
-| scrartcl | Es la clase estándar. Diseñada para artículos (más o menos cortos)                                  |
-| scrreprt | Clase reportes, similar a los libros. Se diferencian principalmente en los valores predeterminados. |
-| scrbook  | Diseñada para libros desde aproximadamente una docena hasta miles de páginas                        |
-
-## Clases de documentos {.title-top}
-
-<br>
-
-Seleccionar que clase de documento pdf queremos tendrá que ver con lo que estemos produciendo.
-
-Por ejemplo, los artículos estan configurados predeterminandamente con una sola cara, lo mismo que los reportes. En cambio, los libros son de doble cara.
-
-De todas maneras, las opciones se pueden cambiar con `classoption:` (oneside, twoside)
-
-<br>
-
-::: {.callout-note .especial appearance="simple" icon="false"}
-## Ejemplo
-
-Configurar el documento de clase `scrbook` automatizará muchas de las necesidades comunes para imprimir y encuadernar archivos PDF en un libro físico (es decir, los capítulos comienzan en páginas impares, tamaños de márgenes alternos, etc.)
-:::
-
-## Otras opciones de ejecución {.title-top}
-
-<br>
-
-| Opción      | Descripción                                              |
-|-------------|----------------------------------------------------------|
-| `papersize` | Configura tamaño de papel                                |
-| `lot`       | Activa tabla de tablas                                   |
-| `lof`       | Activa tabla de figuras                                  |
-| `fontsize`  | Tamaño de fuente                                         |
-| `mainfont`  | Fuente principal                                         |
-| `geometry`  | Llama a paquete latex geometrías - define margenes, etc. |
 
 ## Librerías latex {.title-top}
 
@@ -1648,26 +1606,6 @@ $ 7.32 beta +
 ```
 
 ![](images/ecuacion.PNG){.absolute bottom="200" left="20" width="400"}
-
-## Pantillas personalizadas {.title-top}
-
-
-Existen plantillas typst preconfeccionadas que se pueden utilizar o bien personalizar una propia.
-
-| Formato   | Uso                                                      |
-|-----------|----------------------------------------------------------|
-| Poster    | quarto use template quarto-ext/typst-templates/poster    |
-| IEEE      | quarto use template quarto-ext/typst-templates/ieee      |
-| AMS       | quarto use template quarto-ext/typst-templates/ams       |
-| Letter    | quarto use template quarto-ext/typst-templates/letter    |
-| Fiction   | quarto use template quarto-ext/typst-templates/fiction   |
-| Dept News | quarto use template quarto-ext/typst-templates/dept-news |
-
-En el siguiente [tutorial](https://typst.app/docs/tutorial/making-a-template/) de typst guian en la creación de una plantilla.
-
-<br>
-
-También en el sitio [Awesome Quarto](https://github.com/qjcg/awesome-typst#templates--libraries) hay páginas de plantillas de terceros disponibles para utilizar.
 
 
 ## Word (docx) {.title-top}
@@ -2094,6 +2032,7 @@ datatable(datos)
 
 ## Tablas desde código {.title-top}
 
+<br>
 
 ```{r}
 #| echo: false
@@ -2101,12 +2040,12 @@ datatable(datos)
 library(DT)
 library(datos)
 
-encuesta |> 
-  select(estado_civil, edad, partido, ingreso) |> 
+paises |> 
+  select(pais, continente, anio, esperanza_de_vida) |> 
 datatable(class = 'cell-border stripe', 
           rownames = F, 
           options = list(
-            pageLength = 3, 
+            pageLength = 5, 
             autoWidth = TRUE))
 ```
 
