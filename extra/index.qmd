@@ -121,7 +121,7 @@ for (variable in vector) {
 
 <br>
 
-Donde `variable` se reemplaza por un índice (generalmente `1` pero puede llamarse como deseemos) que recorrerá un `vector` desde 1 a una determinada longitud. (habitualmente `1:length(x)`).
+Donde `variable` se reemplaza por un índice (generalmente `i` pero puede llamarse como deseemos) que recorrerá un `vector` desde 1 a una determinada longitud. (habitualmente `1:length(x)`).
 
 En cada vuelta la `variable` aumenta 1 hasta que alcanza el final del `vector`.
 
@@ -163,7 +163,7 @@ Paquete con herramientas que buscan remplazar las formas tradicionales de bucles
 
 - El paquete se instala y activa con tidyverse.
 
-- Sus funciones son faciles de escribir pero más dificiles de entender para usuarios sin conocimientos de programación.
+- Sus funciones son fáciles de escribir pero más difíciles de entender para usuarios sin conocimientos de programación.
 
 - Las familia de funciones `map()` son similares en idea que la familia de funciones `apply()` de R base pero consistentes con el ecosistema tidyverse.
  
