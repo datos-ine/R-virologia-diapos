@@ -386,7 +386,7 @@ knitr::include_graphics("images/homocedasticidad_levene.JPG")
 #| echo: false
 #| fig-align: center
 #| out-width: 70%
-knitr::include_graphics("images/errores.JPG")
+knitr::include_graphics("images/errores.png")
 ```
 
 ## ¿Qué test se debe aplicar en cada caso?
@@ -452,7 +452,7 @@ Hay 4 elementos que están íntimamente relacionados en este *"juego"* de los te
 
 - Nivel de significación (Error de tipo I)
 - Tamaño de efecto (hay diferentes medidas estandarizadas para cuantificar su magnitud)
-- Potencia (Error de tipo II)
+- Potencia 
 - Tamaño de la muestra
 
 El paquete `pwr` en R, incorpora funciones que dados tres de ellos, calcula el cuarto elemento. 
